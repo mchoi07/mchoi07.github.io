@@ -8,21 +8,21 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 18 Jul 2019 13:27:53 GMT</pubDate>
+    <pubDate>Thu, 18 Jul 2019 13:29:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>[JavaScript로 중력 구현하기] 1. 중력이란 무엇일까?</title>
+      <title>Test</title>
       <link>https://mchoi07.github.io/2019/07/18/test/</link>
       <guid>https://mchoi07.github.io/2019/07/18/test/</guid>
       <pubDate>Thu, 18 Jul 2019 13:27:50 GMT</pubDate>
       <description>
       
-        &lt;p&gt;This should be a summary of this post&lt;br&gt;&lt;/p&gt;
+        &lt;p&gt;This section should be a summary of this post&lt;br&gt;&lt;/p&gt;
       
       </description>
       
-      <content:encoded><![CDATA[<p>This should be a summary of this post<br><a id="more"></a></p><h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><p>Greeting this is a test post for the future references. </p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> x == <span class="hljs-string">'test'</span>:</span><br><span class="line">  print(<span class="hljs-string">"hello world"</span>)</span><br></pre></td></tr></table></figure><p><strong>The equation of test script is </strong> $y = x + 1$</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>This section should be a summary of this post<br><a id="more"></a></p><h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><p>Greeting this is a test post for the future references. </p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> x == <span class="hljs-string">'test'</span>:</span><br><span class="line">  print(<span class="hljs-string">"hello world"</span>)</span><br></pre></td></tr></table></figure><p><strong>The equation of test script is </strong> $y = x + 1$</p>]]></content:encoded>
       
       <comments>https://mchoi07.github.io/2019/07/18/test/#disqus_thread</comments>
     </item>
