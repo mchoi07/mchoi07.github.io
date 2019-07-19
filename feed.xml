@@ -8,7 +8,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 19 Jul 2019 18:56:57 GMT</pubDate>
+    <pubDate>Fri, 19 Jul 2019 20:27:21 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -22,7 +22,7 @@
       
       </description>
       
-      <content:encoded><![CDATA[<p>A simulation is not real but it can represent the real. It’s because a simulation is an imitation of real situation - it can’t be exact but it can be approximate.</p><a id="more"></a><h2 id="Simulation-01-Random-Number"><a href="#Simulation-01-Random-Number" class="headerlink" title="Simulation 01 - Random Number"></a>Simulation 01 - Random Number</h2><p>Greeting this is a test post for the future references. </p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> x == <span class="hljs-string">'test'</span>:</span><br><span class="line">  print(<span class="hljs-string">"hello world"</span>)</span><br></pre></td></tr></table></figure><p><strong>The equation of test script is </strong> $y = x + 1$</p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>A simulation is not real but it can represent the real. It’s because a simulation is an imitation of real situation - it can’t be exact but it can be approximate.</p><a id="more"></a><h2 id="Simulation-01-Random-Number"><a href="#Simulation-01-Random-Number" class="headerlink" title="Simulation 01 - Random Number"></a>Simulation 01 - Random Number</h2><blockquote><p>Author: Minkyu Choi<br>Last updated: 07/19/2019</p></blockquote><p>Greeting this is a test post for the future references. </p><figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">if</span> x == <span class="hljs-string">'test'</span>:</span><br><span class="line">  print(<span class="hljs-string">"hello world"</span>)</span><br></pre></td></tr></table></figure><p><strong>The equation of test script is </strong> $y = x + 1$</p>]]></content:encoded>
       
       <comments>https://mchoi07.github.io/2019/07/18/random-number/#disqus_thread</comments>
     </item>
