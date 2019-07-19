@@ -8,8 +8,24 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 19 Jul 2019 20:27:21 GMT</pubDate>
+    <pubDate>Fri, 19 Jul 2019 21:17:33 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Simulation 02 - Random variable</title>
+      <link>https://mchoi07.github.io/2019/07/19/random-variable/</link>
+      <guid>https://mchoi07.github.io/2019/07/19/random-variable/</guid>
+      <pubDate>Fri, 19 Jul 2019 04:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Randome variable can be generated from a good random number generate. If a real variable has moved the reality, we could design a future with a good random variables.&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>Randome variable can be generated from a good random number generate. If a real variable has moved the reality, we could design a future with a good random variables.</p><a id="more"></a><h2 id="Simulation-02-Random-variable"><a href="#Simulation-02-Random-variable" class="headerlink" title="Simulation 02 - Random variable"></a>Simulation 02 - Random variable</h2><blockquote><p>Author: Minkyu Choi<br>Last updated: 07/19/2019</p></blockquote><p><strong>References</strong><br><a href="https://newonlinecourses.science.psu.edu/stat414/node/104/" rel="external nofollow noopener noreferrer" target="_blank">Link-1</a></p>]]></content:encoded>
+      
+      <comments>https://mchoi07.github.io/2019/07/19/random-variable/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Simulation 01 - Random Number</title>
