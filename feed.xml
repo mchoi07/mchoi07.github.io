@@ -8,8 +8,24 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Fri, 19 Jul 2019 21:21:57 GMT</pubDate>
+    <pubDate>Thu, 07 Nov 2019 02:42:16 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Test</title>
+      <link>https://mchoi07.github.io/2019/11/06/test/</link>
+      <guid>https://mchoi07.github.io/2019/11/06/test/</guid>
+      <pubDate>Wed, 06 Nov 2019 05:00:00 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;Random variable can be generated from a good random number generator. If real variables has moved the reality, we could design a future with a good random variables.&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>Random variable can be generated from a good random number generator. If real variables has moved the reality, we could design a future with a good random variables.</p><a id="more"></a><h2 id="Test"><a href="#Test" class="headerlink" title="Test"></a>Test</h2><blockquote><p>Author: Minkyu Choi<br>Last updated: 11/06/2019</p></blockquote><p>This is test</p>]]></content:encoded>
+      
+      <comments>https://mchoi07.github.io/2019/11/06/test/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Simulation 02 - Random variable</title>
