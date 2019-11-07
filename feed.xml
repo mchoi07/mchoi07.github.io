@@ -8,7 +8,7 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Thu, 07 Nov 2019 02:45:49 GMT</pubDate>
+    <pubDate>Thu, 07 Nov 2019 02:47:52 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
@@ -18,7 +18,11 @@
       <pubDate>Thu, 07 Nov 2019 02:36:56 GMT</pubDate>
       <description>
       
+        &lt;p&gt;Test&lt;/p&gt;
+      
       </description>
+      
+      <content:encoded><![CDATA[<p>Test</p><a id="more"></a><p>Hello world.</p>]]></content:encoded>
       
       <comments>https://mchoi07.github.io/2019/11/06/first-post/#disqus_thread</comments>
     </item>
