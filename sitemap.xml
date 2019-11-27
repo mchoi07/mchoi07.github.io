@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mchoi07.github.io/2019/07/19/random-variable/</loc>
+    
+    <lastmod>2019-11-27T03:20:44.953Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mchoi07.github.io/2019/07/18/random-number/</loc>
+    
+    <lastmod>2019-11-27T03:01:28.888Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mchoi07.github.io/2019/11/06/first-post/</loc>
     
     <lastmod>2019-11-26T03:37:58.333Z</lastmod>
@@ -12,20 +26,6 @@
     <loc>https://mchoi07.github.io/about/index.html</loc>
     
     <lastmod>2019-11-07T04:26:58.646Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/07/18/random-number/</loc>
-    
-    <lastmod>2019-07-20T01:49:18.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/07/19/random-variable/</loc>
-    
-    <lastmod>2019-07-19T21:21:57.000Z</lastmod>
     
   </url>
   
