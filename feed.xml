@@ -8,19 +8,26 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 07 Dec 2019 20:05:05 GMT</pubDate>
+    <pubDate>Sat, 07 Dec 2019 20:29:12 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
       <title>암호화복호화</title>
-      <link>https://mchoi07.github.io/2019/12/07/%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA/</link>
-      <guid>https://mchoi07.github.io/2019/12/07/%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA/</guid>
-      <pubDate>Sat, 07 Dec 2019 20:03:10 GMT</pubDate>
+      <link>https://mchoi07.github.io/2019/11/29/%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA/</link>
+      <guid>https://mchoi07.github.io/2019/11/29/%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA/</guid>
+      <pubDate>Fri, 29 Nov 2019 20:03:10 GMT</pubDate>
       <description>
+      
+        
+        
+          &lt;h5 id=&quot;Reference&quot;&gt;&lt;a href=&quot;#Reference&quot; class=&quot;headerlink&quot; title=&quot;Reference&quot;&gt;&lt;/a&gt;Reference&lt;/h5&gt;&lt;p&gt;&lt;a href=&quot;https://www.wired.co.uk/article/e
+        
       
       </description>
       
-      <comments>https://mchoi07.github.io/2019/12/07/%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA/#disqus_thread</comments>
+      <content:encoded><![CDATA[<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://www.wired.co.uk/article/encryption-software-app-private-data-safe" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a></p>]]></content:encoded>
+      
+      <comments>https://mchoi07.github.io/2019/11/29/%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA/#disqus_thread</comments>
     </item>
     
     <item>
@@ -34,7 +41,7 @@
       
       </description>
       
-      <content:encoded><![CDATA[<p>To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that data is free from viruses and trojans. </p><a id="more"></a><p>If our system has sensitive data and critical for operation you have to be more cautious about bringing data to your system - cyber attack, nowadays, is being serious and cunning. </p><p>In a normal usecase, we set up Anti Virus (AV) scanner on a file system. AV scanner monitor our file system and RAM in real-time or batch. However, it cannot make sure that each file doesn’t have any malicious content in real-time. In this project, we will use two open source products to detect virus/trojan in realtime. We are going to use <code>Apache Nifi</code> and <code>ClamAV</code> </p><p><a href="https://nifi.apache.org/" target="_blank" rel="external nofollow noopener noreferrer">Apache Nifi</a> is a very powerful, easy to use and stable system to process and distribute data between disparate system. Apache Nifi is a real time data ingestion platform, which can transfer and manage data transfer between different sources and destination systems. </p><p><a href="https://www.clamav.net/" target="_blank" rel="external nofollow noopener noreferrer">ClamAV</a> is an open source antivirus engine for detecting trojans, viruses, malware &amp; other malicious threats. </p><h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://isutah.com/virus-protection-cleanup/" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a></p>]]></content:encoded>
+      <content:encoded><![CDATA[<p>To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that data is free from viruses and trojans. </p><a id="more"></a><p>If our system has sensitive data and critical for operation you have to be more cautious about bringing data to your system - cyber attack, nowadays, is being serious and cunning. </p><p>In a normal usecase, we set up Anti Virus (AV) scanner on a file system. AV scanner monitor our file system and RAM in real-time or batch. However, it cannot make sure that each file doesn’t have any malicious content in real-time. In this project, we will use two open source products to detect virus/trojan in realtime. We are going to use <code>Apache Nifi</code> and <code>ClamAV</code> </p><p><a href="https://nifi.apache.org/" target="_blank" rel="external nofollow noopener noreferrer">Apache Nifi</a> is a very powerful, easy to use and stable system to process and distribute data between disparate system. Apache Nifi is a real time data ingestion platform, which can transfer and manage data transfer between different sources and destination systems. </p><p><a href="https://www.clamav.net/" target="_blank" rel="external nofollow noopener noreferrer">ClamAV</a> is an open source antivirus engine for detecting trojans, viruses, malware &amp; other malicious threats. </p><h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://isutah.com/virus-protection-cleanup/" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a>s</p>]]></content:encoded>
       
       <comments>https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/#disqus_thread</comments>
     </item>
