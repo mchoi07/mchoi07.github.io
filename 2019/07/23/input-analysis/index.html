@@ -2,24 +2,23 @@
 <html lang="ko">
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Realtime Virus Scanning</title>
+<title>Simulation 03 - Input Analysis</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="canonical" href="https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/">
+<link rel="canonical" href="https://mchoi07.github.io/2019/07/23/input-analysis/">
 
 
-    <meta name="description" content="To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that">
-<meta name="keywords" content="Apache Nifi">
+    <meta name="description" content="In my previous two postings, random number, random variable, I’ve talked about how to generate a random number and how we could make a radom variable by using those random numbers. Then how can we tel">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Realtime Virus Scanning">
-<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;index.html">
+<meta property="og:title" content="Simulation 03 - Input Analysis">
+<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;23&#x2F;input-analysis&#x2F;index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that">
+<meta property="og:description" content="In my previous two postings, random number, random variable, I’ve talked about how to generate a random number and how we could make a radom variable by using those random numbers. Then how can we tel">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
-<meta property="og:updated_time" content="2019-12-07T20:40:18.441Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;23&#x2F;thumnail.jpg">
+<meta property="og:updated_time" content="2019-12-07T21:48:16.779Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;23&#x2F;thumnail.jpg">
 
 
 
@@ -27,10 +26,10 @@
     <meta name="naver-site-verification" content="48beb5f578053c0c5f127b4198a57270bad360ca">
 
 
-<link rel="canonical" href="https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/">
+<link rel="canonical" href="https://mchoi07.github.io/2019/07/23/input-analysis/">
 
 
-<link rel="alternative" href="/feed.xml" title="Realtime Virus Scanning" type="application/xml">
+<link rel="alternative" href="/feed.xml" title="Simulation 03 - Input Analysis" type="application/xml">
 
 
 
@@ -115,7 +114,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/" data-link-name="navigatorLogo">
             
-                <img src="/images/logo.png" alt="Realtime Virus Scanning" height="28">
+                <img src="/images/logo.png" alt="Simulation 03 - Input Analysis" height="28">
             
             </a>
         </div>
@@ -168,7 +167,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/2019/11/20/nifi-virus-scanning/thumbnail.jpg" alt="Realtime Virus Scanning">
+            <img class="thumbnail" src="/2019/07/23/thumnail.jpg" alt="Simulation 03 - Input Analysis">
         </span>
     </div>
     
@@ -176,11 +175,7 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-20T20:14:06.000Z">2019-11-20</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/eng-data-engineering/">ENG-Data Engineering</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2019-07-23T20:40:08.000Z">2019-07-23</time>
                 
                 
                 
@@ -189,31 +184,89 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">
             
-                Realtime Virus Scanning
+                Simulation 03 - Input Analysis
             
         </h1>
         
         <hr>
         
         <div class="content">
-            <p>To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that data is free from viruses and trojans. </p>
-<a id="more"></a>
+            <p>In my previous two postings, <a href="">random number</a>, <a href="">random variable</a>, I’ve talked about how to generate a random number and how we could make a radom variable by using those random numbers. Then how can we tell our random variables are well made? In simulation terminology, we have something called <code>input analysis</code>. The random variables are our input, and we need to analyze those inputs to verify it’s relevance. If you use the wrong input random variables in the simulation model, it will result in wrong output. A proper input analysis can save you from <code>Garbage-in-garbage-out</code></p>
+<p>How can we conduct a proper input analysis?</p>
+<ol>
+<li>We have to collect data<ul>
+<li>Data Sampling - we could shuffle the data and take some samples from there</li>
+</ul>
+</li>
+<li>We have to figure out a distribution of data<ul>
+<li>Plot the data to histogram </li>
+<li>Discrete vs contunuous</li>
+<li>Univariate / Multivariate</li>
+<li>If data is not enough — we can guess a good distribution</li>
+</ul>
+</li>
+<li>We have to do a statistical test to verify the distribution</li>
+</ol>
+<h2 id="Point-Estimation"><a href="#Point-Estimation" class="headerlink" title="Point Estimation"></a>Point Estimation</h2><p>A <em>statistic</em> can not explicitly depend on any <code>unknown parameters</code> because statics are based on the actural observations. <em>Statistics</em> are random variable - we could expect to have two different values of a static when we take two different samples. But we need to find the <code>unknown parameters</code>. How can we do it? we could estimate <code>unknown parameters</code> from the existing probability of distribution.  </p>
+<p>Let $X_1, . . . . , X_n$ be i.i.d. Random Variables and let $M(X) ≡ M(X_1, . . . . , X_n)$ be a statistic based on the $X_i$’s. <strong>Suppose we use $M(X)$ to estimate some unknown parameter $θ$ Then $M(X)$ is called a <em>point estimator</em> for $θ$ .</strong></p>
+<ul>
+<li>$\bar{x}$ is a point estimator for the mean $μ = E[Xi]$</li>
+<li>$S^2$ is a point estimator for the variance  $σ2 = Var(Xi) $</li>
+</ul>
+<p>*<em>It would be nice if $M(X)$ had certain properties: *</em></p>
+<ul>
+<li>Its expected value should equal the parameter it’s trying to estimate</li>
+<li>It should have low variance</li>
+</ul>
+<p>We all know that good estimator should be unbiased because if we use the biased estimator we won’t figure out whether our model is good or not. We will be fooled by a biased estimator. $T(X)$ is <em>unbiased</em> for $θ$ if $E[M(X)] = θ$</p>
+<p><strong>EX1</strong> -  Suppose $X_1, . . . , X_n$ are i.i.d. anything with mean μ. Then</p>
+<p><img src="/2019/07/19/sample_mean.png" alt="sample_mean"></p>
+<p>So $\bar{X}$ is alwys unbiased for $\mu$. That’s why ${\bar{X}}$ is called the <em>sample mean</em> </p>
+<p><strong>EX2</strong> -  Suppose $X_1, . . . , X_n$ are i.i.d. anything with mean μ and variance $\sigma^2$. Then<img src="/2019/07/19/sample_variance.png" alt="sample_variance"></p>
+<p>Thus, $S^2$ is always unbiased for $\sigma^2$. This is why $S^2$ is called the sample variance. </p>
+<h2 id="Mean-Square-Error"><a href="#Mean-Square-Error" class="headerlink" title="Mean Square Error"></a>Mean Square Error</h2><p>In a perfect sceanario, our estimator will be exactly same as $\theta$. Then we will see no error. However, it’s not the real case. Our goal is to reduce the error between an estimator and $\theta$. </p>
+<p>The <em>mean squared error</em> of an estimator $M(X)$ of $\theta$ is<br>$$<br>\begin{aligned}<br> MSE(M(X)) ≡ E[(M(X)-\theta)^2]<br>\end{aligned}<br>$$</p>
+<p>$$<br>\begin{aligned}<br> Baia(M(X)) ≡ E[T(X) - \theta]<br>\end{aligned}<br>$$</p>
+<p>We could interpret MSE like this: </p>
+<p><img src="/2019/07/19/mse.png" alt="mse"></p>
+<p>Lower MSE mean we are avoiding the bias and <strong>variance</strong>. Our goal should be finding a good estimator which can lower our error. If $M_1(X)$ and $M_2(X)$ are two estimators of $\theta$, we’d usually prefer the one with the lower MSE — even if it happens to have higer bias.</p>
+<h2 id="Maximum-Linelihood-Estimators"><a href="#Maximum-Linelihood-Estimators" class="headerlink" title="Maximum Linelihood Estimators"></a>Maximum Linelihood Estimators</h2><p>What if we don’t have a set of data, but we have a pdf/pmf $f(x)$ of the distribution. How can we find the $\theta$?</p>
+<p>Consider an i.i.d. random sample $X_1, . . . , X_n$, where each $X_i$ has pdf/pmf $f(x)$. Further, suppose that $\theta$ is some unknown parameter from $X_i$. The likelihood function is $L(\theta) ≡ \prod f(x_i)$</p>
+<p>The maximum likelihood estimator (MLE) of $\theta$ is the value of $\theta$ that maximizes $L(\theta)$. The MLE is a function of the $X_i$’s and is a RV. </p>
+<p><strong>EX1</strong> -  Suppose $X_1, . . . , X_n$ ~ Exp$(\gamma)$. Find the MLE for $\gamma$</p>
+<p><img src="/2019/07/19/mle-1.png" alt="mle-1"></p>
+<p>Since the natural log function is one-to-one, it’s easy to see that the $\gamma$ that maximizes $L(\gamma)$ also maximize $ln(L(\gamma))$</p>
+<p><img src="/2019/07/19/mle-2.png" alt="mle-2"></p>
+<p><img src="/2019/07/19/mle-3.png" alt="mle-3"></p>
+<p>This implies that the MLE is $\hat{\gamma} = 1 / \bar{X}$</p>
+<p><strong>Invariance Property</strong> </p>
+<p>If $\hat{\theta}$ is the MLE of some parameter $\theta$ and $h(.)$ is a one-to-one function, then $h(\hat{\theta})$ is the MLE of $h(\theta)$</p>
+<p>For Bern(p) distribution the MLE of $p$ is $\hat{p}=\bar{X}$ (which also happens to be unbiased). If we consider the 1:1 function $h(\theta) = \theta^2$ for ($\theta &gt; 0)$, then the <em>Invariance property</em> says that the MLE of $p^2$ is $\bar{X}^2$</p>
+<p>But such a property does not hold for unbiasedness</p>
+<p>$$<br>\begin{aligned}<br>E[S^2] = σ^2<br>\end{aligned}<br>but<br>\begin{aligned}<br>E[\sqrt{S^2}]= σ<br>\end{aligned}<br>$$</p>
+<p>Really that MLE for $\sigma^2$ is $\hat{\sigma^2} = 1/n\sum(X_i - \bar{X})^2$. The good news is that we can still get the MLE for $\sigma$. If we consider the 1:1 function $h(\theta) = +\sqrt{\theta}$, then the invariance property says that the MLE of $\sigma$ is<br>$$<br>\begin{aligned}<br>\hat{\sigma} = \sqrt{\hat{\sigma^2}} = \sqrt{\sum(X_i-\bar{X})^2/n}<br>\end{aligned}<br>$$</p>
+<h2 id="The-Method-of-Moments"><a href="#The-Method-of-Moments" class="headerlink" title="The Method of Moments"></a>The Method of Moments</h2><p>Recall: the $k$th moment of a random variable X is </p>
+<p><img src="/2019/07/19/mom-1.png" alt="mom-1"></p>
+<p>Suppose $X_1, . . . , X_n$ are i.i.d. from p.m.f. / p.d.f. $f(x)$. Then the method of moments(MOM) estimator for $E[X^k]$ is<br>$$<br>m_k ≡ 1/n\sum X^k_i<br>$$<br><img src="/2019/07/19/mom-2.png" alt="mom-2"></p>
+<h2 id="Goodness-of-Fit-Tests"><a href="#Goodness-of-Fit-Tests" class="headerlink" title="Goodness-of-Fit Tests"></a>Goodness-of-Fit Tests</h2><p>We finanlly guessed a reasonable distribution and then estimated the relevant parameters. Now let’s conduct a formal test to see just how sucessful our toils have been.</p>
+<p>In particular, test<br>$$<br>H_0 : X_1, X_2, . . . , X_n - p.m.f / p.d.f. f(x)<br>$$<br>At level of significance<br>$$<br>\alpha ≡ P(Reject H_0 | H_0 true) =P(\text{Type I Error})<br>$$<br>*<em>Chi-Square-Test *</em></p>
+<p>Goodness-of-fit test procedure: </p>
+<ol>
+<li>Divide the domain of $f(x)$ into $k$ sets, say, $A_1, A_2, A_3, . . . , A_k$ (distinct points if X is discret r intervals if X is continuous)</li>
+<li>Tally the actual number of observations that fall in ach set, say, $O_i i = 1, 2, . . . , k$. If $p_i ≡ P(X ∈ Ai)$, then $O_i \text{~ Bin(}n,p_i)$</li>
+<li>Determine the expected number of observations that would fall in each set if $H_0$ were true, say, $E_i = E[O-I] = np_i, i = 1,2, . . . , k$</li>
+<li>Calculate a test statistic based on the differences between the $E_i$ and $O_i$.</li>
+</ol>
+<p><img src="/2019/07/19/gof.png" alt="gof"></p>
+<ol start="5">
+<li>A large value of $X^2_0$ indicate a bad fit. We reject $H_0 \text{ if } \chi^2_0 &gt; \chi^2_{\alpha,k-1-s}$, where $s$ is the number of nuknown paramets from $f(x) that have to be estimated. </li>
+</ol>
+<p>Usual recommendation: For the $\chi^2$ g-o-f test to work, pick $k,n$ such that $E_i &gt;= 5$ and $n$ at least 30</p>
+<p><strong>Kolmogorov_Smirnov Goodness-of-Fit Test</strong></p>
+<p>We’ll test $H_0 : X_1, X_2, . . . , X_n$ some distribution with $c.d.f. F (x)$.</p>
+<p>Recall the difincation of the <em>empirical c.d.f. (also called the sample c.d.f)</em> of the data is<br>$$<br>\hat{F_n}(x) ≡ (\text{number of } X_i &lt;= x) / n<br>$$<br>The <em>Glivenko-Cantelli Lemma</em> says that $\hat{F_n}(x) -&gt; F(x)$ for all $x$ as $ n-&gt;\infin$. So if $H_0$ is ture then $\hat{F_n}(x)$ should be a good approxmination to the true c.d.f. $F(x)$, for large $n$ The main question: Does the empirical distribution actually support the assumption that H0 is true?  <img src="/2019/07/19/ks.png" alt="ks"></p>
+<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://www.computerhope.com/jargon/s/stdin.htm" target="_blank" rel="external nofollow noopener noreferrer">Thumnail</a></p>
 
-<p>If our system has sensitive data and critical for operation you have to be more cautious about bringing data to your system - cyber attack, nowadays, is being serious and cunning. </p>
-<p>In a normal usecase, we set up Anti Virus (AV) scanner on a file system. AV scanner monitor our file system and RAM in real-time or batch. However, it cannot make sure that each file doesn’t have any malicious content in real-time. In this project, we will use two open source products to detect virus/trojan in realtime. We are going to use <code>Apache Nifi</code> and <code>ClamAV</code> </p>
-<p><a href="https://nifi.apache.org/" target="_blank" rel="external nofollow noopener noreferrer">Apache Nifi</a> is a very powerful, easy to use and stable system to process and distribute data between disparate system. Apache Nifi is a real time data ingestion platform, which can transfer and manage data transfer between different sources and destination systems. </p>
-<p><a href="https://www.clamav.net/" target="_blank" rel="external nofollow noopener noreferrer">ClamAV</a> is an open source antivirus engine for detecting trojans, viruses, malware &amp; other malicious threats. </p>
-<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://isutah.com/virus-protection-cleanup/" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a>s</p>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase post-tags">
-            <div class="level-start">
-                <div class="tags">
-                    <span class="is-size-6 has-text-grey has-mr-7 tag-icon"><i class="fas fa-tag"></i></span>
-                    <a class="tag -link" href="/tags/apache-nifi/" rel="tag">Apache Nifi</a>
-                </div>
-            </div>
         </div>
         
         
@@ -234,8 +287,8 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey article-nav-prev" href="/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/">
-                <i class="fas fa-chevron-left"></i> 암호화복호화
+            <a data-link-name="pagenator" class="level level-item has-link-grey article-nav-prev" href="/2019/07/30/output-analysis/">
+                <i class="fas fa-chevron-left"></i> Simulation 04 - Output Analysis
             </a>
         </div>
         
@@ -246,8 +299,8 @@
         </div>
         
         <div class="level-end card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/07/30/output-analysis/">
-                Simulation 04 - Output Analysis <i class="fas fa-chevron-right"></i>
+            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/07/19/random-variable/">
+                Simulation 02 - Random variable <i class="fas fa-chevron-right"></i>
             </a>
         </div>
         
@@ -272,10 +325,30 @@
                 카탈로그
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#Reference">
+        <a class="is-flex" href="#Point-Estimation">
         <span class="has-mr-6">1</span>
+        <span>Point Estimation</span>
+        </a></li><li>
+        <a class="is-flex" href="#Mean-Square-Error">
+        <span class="has-mr-6">2</span>
+        <span>Mean Square Error</span>
+        </a></li><li>
+        <a class="is-flex" href="#Maximum-Linelihood-Estimators">
+        <span class="has-mr-6">3</span>
+        <span>Maximum Linelihood Estimators</span>
+        </a></li><li>
+        <a class="is-flex" href="#The-Method-of-Moments">
+        <span class="has-mr-6">4</span>
+        <span>The Method of Moments</span>
+        </a></li><li>
+        <a class="is-flex" href="#Goodness-of-Fit-Tests">
+        <span class="has-mr-6">5</span>
+        <span>Goodness-of-Fit Tests</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Reference">
+        <span class="has-mr-6">5.1</span>
         <span>Reference</span>
-        </a></li></ul>
+        </a></li></ul></li></ul>
         </div>
     </div>
 </div>
@@ -331,11 +404,11 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Realtime Virus Scanning" height="28">
+                    <img src="/images/logo.png" alt="Simulation 03 - Input Analysis" height="28">
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 Realtime Virus Scanning&nbsp;
+                &copy; 2019 Simulation 03 - Input Analysis&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>

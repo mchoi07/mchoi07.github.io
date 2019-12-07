@@ -2,24 +2,21 @@
 <html lang="ko">
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Realtime Virus Scanning</title>
+<title>Simulation 04 - Output Analysis</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="canonical" href="https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/">
+<link rel="canonical" href="https://mchoi07.github.io/2019/07/30/output-analysis/">
 
 
-    <meta name="description" content="To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that">
-<meta name="keywords" content="Apache Nifi">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Realtime Virus Scanning">
-<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Simulation 04 - Output Analysis">
+<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;30&#x2F;output-analysis&#x2F;index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that">
 <meta property="og:locale" content="ko">
-<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
-<meta property="og:updated_time" content="2019-12-07T20:40:18.441Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
+<meta property="og:updated_time" content="2019-12-07T21:42:28.980Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
 
 
 
@@ -27,10 +24,10 @@
     <meta name="naver-site-verification" content="48beb5f578053c0c5f127b4198a57270bad360ca">
 
 
-<link rel="canonical" href="https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/">
+<link rel="canonical" href="https://mchoi07.github.io/2019/07/30/output-analysis/">
 
 
-<link rel="alternative" href="/feed.xml" title="Realtime Virus Scanning" type="application/xml">
+<link rel="alternative" href="/feed.xml" title="Simulation 04 - Output Analysis" type="application/xml">
 
 
 
@@ -115,7 +112,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/" data-link-name="navigatorLogo">
             
-                <img src="/images/logo.png" alt="Realtime Virus Scanning" height="28">
+                <img src="/images/logo.png" alt="Simulation 04 - Output Analysis" height="28">
             
             </a>
         </div>
@@ -166,21 +163,11 @@
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-10-widescreen has-order-2 column-main"><div class="card">
     
-    <div class="card-image">
-        <span class="image is-7by1">
-            <img class="thumbnail" src="/2019/11/20/nifi-virus-scanning/thumbnail.jpg" alt="Realtime Virus Scanning">
-        </span>
-    </div>
-    
     <div class="card-content article ">
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-11-20T20:14:06.000Z">2019-11-20</time>
-                
-                <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/eng-data-engineering/">ENG-Data Engineering</a>
-                </div>
+                <time class="level-item has-text-grey" datetime="2019-07-30T20:40:25.000Z">2019-07-30</time>
                 
                 
                 
@@ -189,31 +176,14 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">
             
-                Realtime Virus Scanning
+                Simulation 04 - Output Analysis
             
         </h1>
         
         <hr>
         
         <div class="content">
-            <p>To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that data is free from viruses and trojans. </p>
-<a id="more"></a>
-
-<p>If our system has sensitive data and critical for operation you have to be more cautious about bringing data to your system - cyber attack, nowadays, is being serious and cunning. </p>
-<p>In a normal usecase, we set up Anti Virus (AV) scanner on a file system. AV scanner monitor our file system and RAM in real-time or batch. However, it cannot make sure that each file doesn’t have any malicious content in real-time. In this project, we will use two open source products to detect virus/trojan in realtime. We are going to use <code>Apache Nifi</code> and <code>ClamAV</code> </p>
-<p><a href="https://nifi.apache.org/" target="_blank" rel="external nofollow noopener noreferrer">Apache Nifi</a> is a very powerful, easy to use and stable system to process and distribute data between disparate system. Apache Nifi is a real time data ingestion platform, which can transfer and manage data transfer between different sources and destination systems. </p>
-<p><a href="https://www.clamav.net/" target="_blank" rel="external nofollow noopener noreferrer">ClamAV</a> is an open source antivirus engine for detecting trojans, viruses, malware &amp; other malicious threats. </p>
-<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://isutah.com/virus-protection-cleanup/" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a>s</p>
-
-        </div>
-        
-        <div class="level is-size-7 is-uppercase post-tags">
-            <div class="level-start">
-                <div class="tags">
-                    <span class="is-size-6 has-text-grey has-mr-7 tag-icon"><i class="fas fa-tag"></i></span>
-                    <a class="tag -link" href="/tags/apache-nifi/" rel="tag">Apache Nifi</a>
-                </div>
-            </div>
+            
         </div>
         
         
@@ -234,8 +204,8 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey article-nav-prev" href="/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/">
-                <i class="fas fa-chevron-left"></i> 암호화복호화
+            <a data-link-name="pagenator" class="level level-item has-link-grey article-nav-prev" href="/2019/11/20/nifi-virus-scanning/">
+                <i class="fas fa-chevron-left"></i> Realtime Virus Scanning
             </a>
         </div>
         
@@ -246,8 +216,8 @@
         </div>
         
         <div class="level-end card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/07/30/output-analysis/">
-                Simulation 04 - Output Analysis <i class="fas fa-chevron-right"></i>
+            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/07/23/input-analysis/">
+                Simulation 03 - Input Analysis <i class="fas fa-chevron-right"></i>
             </a>
         </div>
         
@@ -271,11 +241,7 @@
             <h3 class="menu-label">
                 카탈로그
             </h3>
-            <ul class="menu-list"><li>
-        <a class="is-flex" href="#Reference">
-        <span class="has-mr-6">1</span>
-        <span>Reference</span>
-        </a></li></ul>
+            
         </div>
     </div>
 </div>
@@ -331,11 +297,11 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Realtime Virus Scanning" height="28">
+                    <img src="/images/logo.png" alt="Simulation 04 - Output Analysis" height="28">
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 Realtime Virus Scanning&nbsp;
+                &copy; 2019 Simulation 04 - Output Analysis&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>
