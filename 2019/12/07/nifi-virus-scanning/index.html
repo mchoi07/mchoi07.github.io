@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>암호화복호화</title>
+<title>Realtime Virus Scanning</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="keywords" content="암호화복호화">
+    <meta name="description" content="To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that">
+<meta name="keywords" content="Apache Nifi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="암호화복호화">
-<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;encryption&#x2F;index.html">
+<meta property="og:title" content="Realtime Virus Scanning">
+<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;nifi-virus-scanning&#x2F;index.html">
 <meta property="og:site_name">
+<meta property="og:description" content="To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94&#x2F;thumbnail.jpg">
-<meta property="og:updated_time" content="2019-12-07T20:05:05.497Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
+<meta property="og:updated_time" content="2019-12-07T20:15:46.699Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94&#x2F;thumbnail.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;07&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
 
 
 
@@ -24,10 +26,10 @@
     <meta name="naver-site-verification" content="48beb5f578053c0c5f127b4198a57270bad360ca">
 
 
-<link rel="canonical" href="https://mchoi07.github.io/2019/12/07/encryption/">
+<link rel="canonical" href="https://mchoi07.github.io/2019/12/07/nifi-virus-scanning/">
 
 
-<link rel="alternative" href="/feed.xml" title="암호화복호화" type="application/xml">
+<link rel="alternative" href="/feed.xml" title="Realtime Virus Scanning" type="application/xml">
 
 
 
@@ -103,7 +105,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/" data-link-name="navigatorLogo">
             
-                <img src="/images/logo.png" alt="암호화복호화" height="28">
+                <img src="/images/logo.png" alt="Realtime Virus Scanning" height="28">
             
             </a>
         </div>
@@ -156,7 +158,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/thumbnail.jpg" alt="암호화복호화">
+            <img class="thumbnail" src="/2019/12/07/nifi-virus-scanning/thumbnail.jpg" alt="Realtime Virus Scanning">
         </span>
     </div>
     
@@ -164,10 +166,10 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-12-07T20:03:10.000Z">2019-12-07</time>
+                <time class="level-item has-text-grey" datetime="2019-12-07T20:14:06.000Z">2019-12-07</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/kor-data-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%BC%ED%95%99/">KOR-Data 컴퓨터과학</a>
+                <a class="has-link-grey -link" href="/categories/eng-data-engineering/">ENG-Data Engineering</a>
                 </div>
                 
                 
@@ -177,21 +179,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">
             
-                암호화복호화
+                Realtime Virus Scanning
             
         </h1>
         
         <hr>
         
         <div class="content">
-            
+            <p>To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that data is free from viruses and trojans. </p>
+<a id="more"></a>
+
+<p>If our system has sensitive data and critical for operation you have to be more cautious about bringing data to your system - cyber attack, nowadays, is being serious and cunning. </p>
+<p>In a normal usecase, we set up Anti Virus (AV) scanner on a file system. AV scanner monitor our file system and RAM in real-time or batch. However, it cannot make sure that each file doesn’t have any malicious content in real-time. In this project, we will use two open source products to detect virus/trojan in realtime. We are going to use <code>Apache Nifi</code> and <code>ClamAV</code> </p>
+<p><a href="https://nifi.apache.org/" target="_blank" rel="external nofollow noopener noreferrer">Apache Nifi</a> is a very powerful, easy to use and stable system to process and distribute data between disparate system. Apache Nifi is a real time data ingestion platform, which can transfer and manage data transfer between different sources and destination systems. </p>
+<p><a href="https://www.clamav.net/" target="_blank" rel="external nofollow noopener noreferrer">ClamAV</a> is an open source antivirus engine for detecting trojans, viruses, malware &amp; other malicious threats. </p>
+<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://isutah.com/virus-protection-cleanup/" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a></p>
+
         </div>
         
         <div class="level is-size-7 is-uppercase post-tags">
             <div class="level-start">
                 <div class="tags">
                     <span class="is-size-6 has-text-grey has-mr-7 tag-icon"><i class="fas fa-tag"></i></span>
-                    <a class="tag -link" href="/tags/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/" rel="tag">암호화복호화</a>
+                    <a class="tag -link" href="/tags/apache-nifi/" rel="tag">Apache Nifi</a>
                 </div>
             </div>
         </div>
@@ -220,8 +230,8 @@
         </div>
         
         <div class="level-end card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/07/19/random-variable/">
-                Simulation 02 - Random variable <i class="fas fa-chevron-right"></i>
+            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/12/07/%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA/">
+                암호화복호화 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
         
@@ -245,7 +255,11 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Reference">
+        <span class="has-mr-6">1</span>
+        <span>Reference</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -301,11 +315,11 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="암호화복호화" height="28">
+                    <img src="/images/logo.png" alt="Realtime Virus Scanning" height="28">
                 
                 </a>
                 <p class="is-size-7">
-                &copy; 2019 암호화복호화&nbsp;
+                &copy; 2019 Realtime Virus Scanning&nbsp;
                 Powered by <a href="https://hexo.io/" target="_blank" rel="external nofollow noopener noreferrer">Hexo</a> & <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="external nofollow noopener noreferrer">Icarus</a>
                 
                 </p>
