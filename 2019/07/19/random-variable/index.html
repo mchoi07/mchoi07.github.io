@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="generator" content="Hexo 3.8.0">
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>Simulation 02 - Random variable</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 
 
-    <meta name="description" content="Random variable can be generated from a good random number generator. If real variables has moved the reality, we could design a future with a good random variables.">
-<meta name="keywords" content="simulation,random variable">
+    <meta name="description" content="Randome variable can be generated from a good random number generate. If a real variable has moved the reality, we could design a future with a good random variables.">
+<meta name="keywords" content="simulation,random,random variable,inverse transform method,cutpoint method,convolution method,acceptance rejection method,composition method,multivariate normal distribution,stochastic process">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Simulation 02 - Random variable">
-<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;19&#x2F;random-variable&#x2F;index.html">
+<meta property="og:url" content="https://mchoi07.github.io/2019/07/19/random-variable/index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Random variable can be generated from a good random number generator. If real variables has moved the reality, we could design a future with a good random variables.">
+<meta property="og:description" content="Randome variable can be generated from a good random number generate. If a real variable has moved the reality, we could design a future with a good random variables.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;19&#x2F;random-variable&#x2F;thumbnail.jpg">
-<meta property="og:updated_time" content="2019-11-27T14:22:18.158Z">
+<meta property="og:image" content="https://mchoi07.github.io/2019/07/19/random-variable/thumbnail.jpg">
+<meta property="og:updated_time" content="2019-07-19T21:17:33.772Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;19&#x2F;random-variable&#x2F;thumbnail.jpg">
+<meta name="twitter:title" content="Simulation 02 - Random variable">
+<meta name="twitter:description" content="Randome variable can be generated from a good random number generate. If a real variable has moved the reality, we could design a future with a good random variables.">
+<meta name="twitter:image" content="https://mchoi07.github.io/2019/07/19/random-variable/thumbnail.jpg">
 
 
 
@@ -137,12 +139,12 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;" target="_blank" rel="noopener">
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;">
                     <i class="fas fa-list-ul"></i>
                 </a>
                 
                 
-                <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
+                <a class="navbar-item search" title="Search" href="javascript:;">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -186,30 +188,12 @@
         <hr>
         
         <div class="content">
-            <p>Random variable can be generated from a good random number generator. If real variables has moved the reality, we could design a future with a good random variables.</p>
+            <p>Randome variable can be generated from a good random number generate. If a real variable has moved the reality, we could design a future with a good random variables.</p>
 <a id="more"></a>
-
-<blockquote>
+<h2 id="Simulation-02-Random-variable"><a href="#Simulation-02-Random-variable" class="headerlink" title="Simulation 02 - Random variable"></a>Simulation 02 - Random variable</h2><blockquote>
 <p>Author: Minkyu Choi<br>Last updated: 07/19/2019</p>
 </blockquote>
-<p><strong>Inverse Transform Method</strong><br>Inverse transform sampling is a method for generating random numbers from any probability distribution by using its inverse cumulative distribution F−1(x)F−1(x). Recall that the cumulative distribution for a random variable XX is FX(x)=P(X≤x)FX(x)=P(X≤x). In what follows, we assume that our computer can, on demand, generate independent realizations of a random variable UU uniformly distributed on [0,1]</p>
-<p><strong>Cutpoint Method</strong><br>This inverse-transform method has the advantage of having an optimal O(n) setup time. However, the average number of steps required to sample X is not optimal, and if several samples of X are needed, then the cutpoint method offers an average number of two comparison steps needed to sample an observation, yet still has an O(n) initial setup time</p>
-<p>Without loss of generality, we can assume that X = [1, n]. Also, let qi = P(X ≤ i). Then the idea behind the cutpoint method is to choose m ≥ n, and define sets Q1, . . . , Qm for which</p>
-<p><img src="/2019/07/19/random-variable/cutpoint.png" alt="Cutpoint Method"></p>
-<p>for all i = 1, . . . , m. In words, the unit interval [0, 1] is partitioned into m equal sub-intervals of the form $[\frac{(i−1)} m,  \frac{i}m)$, i = 1, . . . , m. And when U falls into the i th sub-interval, then Qi contains all the possible qj values for which F −1 (U) = j. That way, instead of searching through all of the q values, we save time by only examining the qj values in Qi , since these are the only possible values for which $F^{-1} (U) = j$.</p>
-<p><strong>Convolution Method</strong></p>
-<ul>
-<li>Sum of n variables: $x = y_1 + y_2 + … y_n$</li>
-<li>Generate n random variate yi’s and sum </li>
-<li>For sums of two variables, pdf of x = convolution of pdfs of y1 and y2. Hence the name </li>
-<li>Although no convolution in generation </li>
-<li>If pdf or CDF = Sum ⇒ Composition </li>
-<li>Variable x = Sum ⇒ Convolution</li>
-</ul>
-<p><strong>Acceptance-Rejection Method</strong><br>Finding an explicit formula for F −1 (y) for the cdf of a rv X we wish to generate, F(x) = P(X ≤ x), is not always possible. Moreover, even if it is, there may be alternative methods for generating a rv distributed as F that is more efficient than the inverse transform method or other methods we have come across. Here we present a very clever method known as the acceptance-rejection method.</p>
-<p><strong>Composition Method</strong><br>Can be used when m can be expressed as a convex combination of other distributions Fi , where we hope to be able to sample from $F_i$ more easily than from F directly.</p>
-<p><img src="/2019/07/19/random-variable/Cm.png" alt="Composition Method"></p>
-<p><strong>References</strong><br><a href="https://newonlinecourses.science.psu.edu/stat414/node/104/" target="_blank" rel="external nofollow noopener noreferrer">Link-1</a><br><a href="https://stephens999.github.io/fiveMinuteStats/inverse_transform_sampling.html" target="_blank" rel="external nofollow noopener noreferrer">Link-2</a><br><a href="http://web.csulb.edu/~tebert/teaching/lectures/552/variate/variate.pdf" target="_blank" rel="external nofollow noopener noreferrer">Link-3</a><br><a href="https://www.cse.wustl.edu/~jain/cse567-08/ftp/k_28rvg.pdf" target="_blank" rel="external nofollow noopener noreferrer">Link-4</a><br><a href="http://www.columbia.edu/~ks20/4703-Sigman/4703-07-Notes-ARM.pdf" target="_blank" rel="external nofollow noopener noreferrer">Link-5</a></p>
+<p><strong>References</strong><br><a href="https://newonlinecourses.science.psu.edu/stat414/node/104/" rel="external nofollow noopener noreferrer" target="_blank">Link-1</a></p>
 
         </div>
         
@@ -217,7 +201,7 @@
             <div class="level-start">
                 <div class="tags">
                     <span class="is-size-6 has-text-grey has-mr-7 tag-icon"><i class="fas fa-tag"></i></span>
-                    <a class="tag -link" href="/tags/random-variable/" rel="tag">random variable</a><a class="tag -link" href="/tags/simulation/" rel="tag">simulation</a>
+                    <a class="tag -link" href="/tags/acceptance-rejection-method/">acceptance rejection method</a><a class="tag -link" href="/tags/composition-method/">composition method</a><a class="tag -link" href="/tags/convolution-method/">convolution method</a><a class="tag -link" href="/tags/cutpoint-method/">cutpoint method</a><a class="tag -link" href="/tags/inverse-transform-method/">inverse transform method</a><a class="tag -link" href="/tags/multivariate-normal-distribution/">multivariate normal distribution</a><a class="tag -link" href="/tags/random/">random</a><a class="tag -link" href="/tags/random-variable/">random variable</a><a class="tag -link" href="/tags/simulation/">simulation</a><a class="tag -link" href="/tags/stochastic-process/">stochastic process</a>
                 </div>
             </div>
         </div>
@@ -271,7 +255,11 @@
             <h3 class="menu-label">
                 Catalogue
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Simulation-02-Random-variable">
+        <span class="has-mr-6">1</span>
+        <span>Simulation 02 - Random variable</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -375,7 +363,7 @@
 
 <div id="outdated">
     <h6>Your browser is out-of-date!</h6>
-    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" target="_blank" rel="external nofollow noopener noreferrer">Update
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/" rel="external nofollow noopener noreferrer" target="_blank">Update
             my browser now </a></p>
     <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
 </div>
@@ -419,7 +407,7 @@ document.addEventListener('DOMContentLoaded', function () {
     
     
 
-<a id="back-to-top" title="Back to Top" href="javascript:;" target="_blank" rel="noopener">
+<a id="back-to-top" title="Back to Top" href="javascript:;">
     <i class="fas fa-chevron-up"></i>
 </a>
 <script src="/js/back-to-top.js" defer></script>
