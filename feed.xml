@@ -8,8 +8,20 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 07 Dec 2019 19:36:33 GMT</pubDate>
+    <pubDate>Sat, 07 Dec 2019 20:05:05 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>암호화복호화</title>
+      <link>https://mchoi07.github.io/2019/12/07/encryption/</link>
+      <guid>https://mchoi07.github.io/2019/12/07/encryption/</guid>
+      <pubDate>Sat, 07 Dec 2019 20:03:10 GMT</pubDate>
+      <description>
+      
+      </description>
+      
+      <comments>https://mchoi07.github.io/2019/12/07/encryption/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>Simulation 02 - Random variable</title>
