@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
 <title>Simulation 04 - Output Analysis</title>
@@ -8,15 +8,17 @@
 <link rel="canonical" href="https://mchoi07.github.io/2019/07/30/output-analysis/">
 
 
-    <meta property="og:type" content="article">
+    <meta name="description" content="Ananyzing the ouput of a simulation model is important. How can we be sure that our output is proper and will not hurt an experiment result using those outputs.">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Simulation 04 - Output Analysis">
 <meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;30&#x2F;output-analysis&#x2F;index.html">
 <meta property="og:site_name">
-<meta property="og:locale" content="ko">
-<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
-<meta property="og:updated_time" content="2019-12-07T21:42:28.980Z">
+<meta property="og:description" content="Ananyzing the ouput of a simulation model is important. How can we be sure that our output is proper and will not hurt an experiment result using those outputs.">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;30&#x2F;output-analysis&#x2F;thumnail.jpg">
+<meta property="og:updated_time" content="2019-12-07T22:26:44.358Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;30&#x2F;output-analysis&#x2F;thumnail.jpg">
 
 
 
@@ -144,12 +146,12 @@
                     
                 
                 
-                <a class="navbar-item is-hidden-tablet catalogue" title="카탈로그" href="javascript:;" target="_blank" rel="noopener">
+                <a class="navbar-item is-hidden-tablet catalogue" title="Catalogue" href="javascript:;" target="_blank" rel="noopener">
                     <i class="fas fa-list-ul"></i>
                 </a>
                 
                 
-                <a class="navbar-item search" title="검색" href="javascript:;" target="_blank" rel="noopener">
+                <a class="navbar-item search" title="Search" href="javascript:;" target="_blank" rel="noopener">
                     <i class="fas fa-search"></i>
                 </a>
                 
@@ -162,6 +164,12 @@
         <div class="container">
             <div class="columns">
                 <div class="column is-8-tablet is-8-desktop is-10-widescreen has-order-2 column-main"><div class="card">
+    
+    <div class="card-image">
+        <span class="image is-7by1">
+            <img class="thumbnail" src="/2019/07/30/output-analysis/thumnail.jpg" alt="Simulation 04 - Output Analysis">
+        </span>
+    </div>
     
     <div class="card-content article ">
         
@@ -183,7 +191,79 @@
         <hr>
         
         <div class="content">
-            
+            <p>Ananyzing the ouput of a simulation model is important. How can we be sure that our output is proper and will not hurt an experiment result using those outputs. </p>
+<a id="more"></a>
+
+<p>Keep this in mind - out is rearely i.i.d. Why do we worry about output? In put processes driving a simulation are random variables. It means our output from the simulation must be random. If we runs the simulation it only yields estimates of measure of system performace, and these estimators are themselves random variables, and are therfore subject to sampling error. Sampling error must be taken into account to make valid inferences concerning system performance. </p>
+<p><strong>Measures of Interest</strong></p>
+<ul>
+<li>Means - what is the mean customer waiting time? </li>
+<li>Variances - how much is the waiting time liable to vary?</li>
+<li>Quantiles - what’s the 99% quantile of the line length in a certain queue?</li>
+<li>Sucess probabilities - will my job be completed on time?</li>
+<li>Would like point estimators and confidence intervals for the above. </li>
+</ul>
+<p>There are two general types of simulations with respect to output analysis. To facilitate the presentation, we identify two types of simulations with respect to output analysis: </p>
+<ul>
+<li><em>Finite-Horizon (Terminating) Simulations</em> - Interested in short-term performance<ul>
+<li>The termincation of finite-horizon simulation takes place at a specific time or is caused by the occurrence of a specific event.</li>
+<li>EX1 - Mass transit system during rush hour</li>
+<li>EX2 - Distribution system over one month</li>
+</ul>
+</li>
+<li><em>Steady-State simulations</em> - Interested in long-term performance<ul>
+<li>The purpose of <em>steady-state simulation</em> is to study the long-run behavior of a system. A performance measure is a steady-state parameter if it is a characteristic of the equilibrium distribution of an output process. </li>
+<li>EX1 - Continuously operating communication system where the objective is the computation of the mean delay of a packet in the long run</li>
+<li>EX2 - Distribution system over a long period of time</li>
+<li>EX3 - Markov chains</li>
+</ul>
+</li>
+</ul>
+<p><strong>Finite-Horizon Simulation</strong></p>
+<p>First thing we have to do to conduct this simulation is getting expected values from replications. So basically, we need to decide a number of independetn replications (IR). IR estimates Var($\bar{Y}_m$) by conducting $r$ independent simulation runs (replications) of the system under study, where each replication consists of $m$ observations. It is easy to make the replications independent - just re-initialize each replication with a different pseudo-random number seed Sample means from replication</p>
+<p>If each run is started under the same operating conditions (e.g., all queues empty and idle), then the replication sample means $Z_1, Z_2, . . . , Z_r$ are $i.i.d.$ random variables. </p>
+<p><img src="/2019/07/30/output-analysis/02.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/04.png" alt=""></p>
+<p>Suppose we want to estimate the expected average waiting time for the first m = 5000 customers at the bank. We make r = 5 independent replications of the system, each initialized empty and<br>idle and consisting of 5000 waiting times. The resulting replicate means are:</p>
+<p><img src="/2019/07/30/output-analysis/01.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/05.png" alt=""></p>
+<p><strong>Steady-state simulation</strong></p>
+<p>How about we need to simulate the entire time line? We should consider to use a steady-state simulation. Estimate some parameter of interest, e.g., the mean customer waiting time or the expected profit produced by a certain factory configuration. In particular, suppose the mean of this output is the unknown quantity $\mu$. We’ll use the sample mean $\bar{Y}_n$ to estimate $\mu$</p>
+<p>We must accompany the value of any point extimator with a measure of its variance. In stead of Var($\bar{Y}_n)$ we canestimate the <em>variance parameter</em>,</p>
+<p><img src="/2019/07/30/output-analysis/06.png" alt=""></p>
+<p>Thus, $\sigma^2$ is imply the sume of all covariances! $\sigma^2$ pops up all over the place: simulation output analysis, Brownian motions, fnancial engineering application, etc. </p>
+<p><img src="/2019/07/30/output-analysis/07.png" alt=""></p>
+<p>Many methods for estimating $\sigma^2$ and for conducting steady-state output analysis in general:</p>
+<ol>
+<li><p>Batch means</p>
+<p>The method of <em>batch means</em> (BM) is often used to estimate $\sigma^2$ and to calculate confidence intervals for $\mu$</p>
+<p>Idea: Divide one long simulation run into a number of contiguous batches, and then appeal to a central limit theorem to assume that the resulting batch sample means are approximately i.i.d. normal. </p>
+<p>In particular, suppose that we partition $Y_1, Y_2, . . . , Y_n$ into $b$ nonoverlapping, contiguous batches, each consisting of $m$ observations (assume that $n = bm$) </p>
+<p><img src="/2019/07/30/output-analysis/08.png" alt=""></p>
+<p>The $i$th batch mean is the sample mean of the $m$ observations from batch $i = 1, 2, . . . , b$</p>
+<p><img src="/2019/07/30/output-analysis/10.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/11.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/12.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/13.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/14.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/15.png" alt=""></p>
+</li>
+</ol>
+<p>$E[H]$ decreases in b, though it smooths out around b = 30. A common recommendation is to take b =. 30 and concentrate on increasing the batch size m as much as possible. </p>
+<p>The technique of BM is intuitively appealing and easy to understand. </p>
+<p>But problems can come up if the Yj ’s are not stationary (e.g., if significant initialization bias is present), if the batch means are not normal, or if the batch means are not independent. </p>
+<p>If any of these assumption violations exist, poor confidence interval coverage may result — unbeknownst to the analyst.</p>
+<p>To ameliorate the initialization bias problem, the user can truncate some of the data or make a long run </p>
+<p>In addition, the lack of independence or normality of the batch means can be countered by increasing the batch size m.</p>
+<p><img src="/2019/07/30/output-analysis/16.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/17.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/18.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/19.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/20.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/21.png" alt=""></p>
+<p><img src="/2019/07/30/output-analysis/22.png" alt=""></p>
+<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://www.computerhope.com/jargon/s/stdin.htm" target="_blank" rel="external nofollow noopener noreferrer">Thumnail</a><br>Georgia Tech’s <code>ISYE6644</code> class content</p>
+
         </div>
         
         
@@ -239,9 +319,13 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                카탈로그
+                Catalogue
             </h3>
-            
+            <ul class="menu-list"><li>
+        <a class="is-flex" href="#Reference">
+        <span class="has-mr-6">1</span>
+        <span>Reference</span>
+        </a></li></ul>
         </div>
     </div>
 </div>
@@ -252,7 +336,7 @@
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
-                카테고리
+                Categories
             </h3>
             <ul class="menu-list">
             <li>
@@ -345,7 +429,7 @@
 <script>console.log("env -> development");</script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
-<script>moment.locale("ko");</script>
+<script>moment.locale("en");</script>
 
 
     
@@ -440,7 +524,7 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="searchbox ins-search">
     <div class="searchbox-container ins-search-container">
         <div class="searchbox-input-wrapper">
-            <input type="text" class="searchbox-input ins-search-input" placeholder="입력 하세요...">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something...">
             <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
         </div>
         <div class="searchbox-result-wrapper ins-section-wrapper">
@@ -452,11 +536,11 @@ document.addEventListener('DOMContentLoaded', function () {
     (function (window) {
         var INSIGHT_CONFIG = {
             TRANSLATION: {
-                POSTS: '포스트',
-                PAGES: '페이지',
-                CATEGORIES: '카테고리',
-                TAGS: '태그',
-                UNTITLED: '(제목없음)',
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
             },
             CONTENT_URL: '/content.json',
         };
