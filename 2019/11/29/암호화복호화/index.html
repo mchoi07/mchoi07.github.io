@@ -7,16 +7,16 @@
 
 
 
-    <meta name="description" content="ReferenceThumnail Image">
+    <meta name="description" content="암호와 복호화여러분들의 데이터는 안전합니까?">
 <meta name="keywords" content="암호화복호화">
 <meta property="og:type" content="article">
 <meta property="og:title" content="암호화복호화">
 <meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E1%84%8B%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA%E1%84%87%E1%85%A9%E1%86%A8%E1%84%92%E1%85%A9%E1%84%92%E1%85%AA&#x2F;index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="ReferenceThumnail Image">
+<meta property="og:description" content="암호와 복호화여러분들의 데이터는 안전합니까?">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94&#x2F;thumbnail.jpg">
-<meta property="og:updated_time" content="2019-12-07T20:29:12.748Z">
+<meta property="og:updated_time" content="2019-12-07T20:40:17.278Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;29&#x2F;%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94&#x2F;thumbnail.jpg">
 
@@ -169,7 +169,7 @@
                 <time class="level-item has-text-grey" datetime="2019-11-29T20:03:10.000Z">2019-11-29</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/kor-data-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%BC%ED%95%99/">KOR-Data 컴퓨터과학</a>
+                <a class="has-link-grey -link" href="/categories/kor-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%BC%ED%95%99/">KOR-컴퓨터과학</a>
                 </div>
                 
                 
@@ -186,7 +186,48 @@
         <hr>
         
         <div class="content">
-            <h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://www.wired.co.uk/article/encryption-software-app-private-data-safe" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a></p>
+            <h1 id="암호와-복호화"><a href="#암호와-복호화" class="headerlink" title="암호와 복호화"></a>암호와 복호화</h1><p>여러분들의 데이터는 안전합니까? </p>
+<a id="more"></a>
+
+<p>오늘은 암호화 (Encryption) 복호화(Decryption)에 대한 이야기를 나눠보고자 합니다. </p>
+<h2 id="암호와-복호와"><a href="#암호와-복호와" class="headerlink" title="암호와/복호와"></a>암호와/복호와</h2><p>암호화는 데이터를 암호화 하여서 누군가가 읽을 수 없도록 정보를 전달화는 과정입니다. 암호와에는 여러가지 알고리즘이 쓰임니다. </p>
+<p>복호와는 암호화된 정보를 다시 읽을 수 있게하는 과정으로써 데이터가 누출되더라도 복호화를 하지못하면 암호화된 데이터를 읽을 수 없습니다. </p>
+<h2 id="암호와-종류"><a href="#암호와-종류" class="headerlink" title="암호와 종류"></a>암호와 종류</h2><ol>
+<li><p>단방향 암호: 암호화 후 복호화 할 수 없습니다. 예를 들면 <code>사용자 비밀번호</code> 사용자가 입력한 비밀번호를 암호화 하고 모든 접근자는 암호화 된 코드를 다시 평문으로 볼 수 없습니다. 해킹이 되어도 복호화가 굉장히 어렵습니다. 예외적인 경우로는 <code>RainbowTable</code> 이 있습니다. </p>
+<p>더 자세한 정보: <a href="https://www.youtube.com/watch?v=TeIVhioUAXs" target="_blank" rel="external nofollow noopener noreferrer">참고영상</a></p>
+</li>
+<li><p>양방향 암호: 암호와와 복호화 모두 가능합니다. <code>사용자 주소, 이메일, 전자서명</code> 등과 같이 정보를 재사용해야 되는 경우에 사용합니다. </p>
+<p>양방향 암호에는 크게 두 가지 종류가 있습니다. </p>
+<ul>
+<li><p>대칭형 암호 (비밀키 암호)</p>
+<p>대칭형 암호는 암호화 할 때 사용하는 키와 복호화 할 때 사용하는 키가 동일한 암호화 기법입니다. 예를 들면 “APPLE”를 “ABCDE”로 암호화 했다면 복호화도 반드시 “ABCDE”로 해야됩니다. 예를 들면 <code>AES Algorithm</code></p>
+<p>하지만 대칭형 암호에는 키 배송에 관한 문제가 발생됩니다. 송신 측에서는 데이터를 암호화한 후에 수신 측에 암호키를 전달해야되고 전달하는 과정에서 이 함호 키가 털리면 데이터가 유출됩니다. 그리고 키 관리가 어렵습니다.</p>
+</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>비대칭형 암호 (공개키 암호)</p>
+<p>비대칭현 암호는 암호와 키와 복호화 키가 다릅니다. </p>
+<p>클라이언트와 서버가 각각의 공개키와 비밀키를 갖고, 서로 공개키를 공개합니다. 클라이언트는 서버의 공개키로 데이터를 암호화한 후에 서버로 보내면 서버는 자신의 비밀키를 가지고 클라이언트가 보낸 데이터를 복호화 합니다. 예를 들면 <code>RSA, Diffe-Hellman, ECC, etc</code></p>
+<p><code>공개키</code> 는 공유되지만 <code>암호키</code> 는 공개되지 않기에 공개키가 중간에 탈취되어도 데이터를 안전하게 지킬 수 있습니다. </p>
+<p>하지만 문제는 비대칭형 암호는 대칭형 암호에 비해 느리고 많은 자료를 암호와 복호화 하는데 불편합니다 단점이 있습니다. </p>
+</li>
+</ul>
+<p>##암호 알고리즘</p>
+<h3 id="단방향"><a href="#단방향" class="headerlink" title="단방향"></a>단방향</h3><ol>
+<li><code>SHA</code> : 가장 대표적인 해시함수</li>
+<li><code>PBKDF2</code> : 해시함수의 컨테이너인 PBKDF2는 솔트를 적용한 후 해시 함수의 반복 횟수를 임의로 선택할 수 있다. PBKDF2는 구현하기 쉬운 알고리즘이며 SHA와 같이 검증된 해시 함수만 사용합니다.</li>
+<li><code>bcrypt</code> : 패스워드 저장을 목적으로 설계되었으며 가장 많이 쓰이는 알고리즘입니다. 입력값을 72 byte로 해야하기 때문에 조금 사용에 불편함이 있을 수 있습니다. </li>
+<li><code>scrypt</code> : scrypt는 상대적으로 최신 알고리즘이며 위에 알고리즘들 보다 더 성능적으로 뛰어난다고 평가되지만 잘 알려져 있지 않습니다. scrypt는 다이제스트를 생성할 때 메모리 오버헤드를 갖도록 설계되어, 억지 기법 공격 (brute-force attack)을 시도할 때 병렬화 처리가 매우 어렵습니다. 따라서 PBKDF2보다 안전하고 bcrypt에 비해 더 경쟁력 있다고 여겨집니다. </li>
+</ol>
+<h3 id="양방향"><a href="#양방향" class="headerlink" title="양방향"></a>양방향</h3><ol>
+<li><code>AES</code>:  현재 가장 보편적으로 쓰이는 암호와 방식이며 미국 표준 방식인 AES. 128 ~ 256 byte 키를 적용 할 수 있어서 보안성이 뛰어난 공개된 알고리즘입니다. </li>
+<li><code>RSA</code> : 공개키 암호 시스템의 하나로 암호와 뿐만 아니라 전자서명까지 가증한 알고리즘입니다. </li>
+</ol>
+<h4 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h4><p><a href="https://sieunlim.tistory.com/16" target="_blank" rel="external nofollow noopener noreferrer">https://sieunlim.tistory.com/16</a></p>
+<p><a href="https://record22.tistory.com/44" target="_blank" rel="external nofollow noopener noreferrer">https://record22.tistory.com/44</a></p>
+<p><a href="https://www.wired.co.uk/article/encryption-software-app-private-data-safe" target="_blank" rel="external nofollow noopener noreferrer">Thumnail Image</a></p>
 
         </div>
         
@@ -249,10 +290,26 @@
                 Catalogue
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#Reference">
+        <a class="is-flex" href="#암호와-복호화">
         <span class="has-mr-6">1</span>
-        <span>Reference</span>
-        </a></li></ul>
+        <span>암호와 복호화</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#암호와-복호와">
+        <span class="has-mr-6">1.1</span>
+        <span>암호와/복호와</span>
+        </a></li><li>
+        <a class="is-flex" href="#암호와-종류">
+        <span class="has-mr-6">1.2</span>
+        <span>암호와 종류</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#단방향">
+        <span class="has-mr-6">1.2.1</span>
+        <span>단방향</span>
+        </a></li><li>
+        <a class="is-flex" href="#양방향">
+        <span class="has-mr-6">1.2.2</span>
+        <span>양방향</span>
+        </a></li></ul></li></ul></li></ul>
         </div>
     </div>
 </div>
@@ -283,9 +340,9 @@
                 <span class="level-item tag">2</span>
             </span>
         </a></li><li>
-        <a class="level is-marginless" href="/categories/kor-data-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%BC%ED%95%99/" data-link-name="category">
+        <a class="level is-marginless" href="/categories/kor-%EC%BB%B4%ED%93%A8%ED%84%B0%EA%B3%BC%ED%95%99/" data-link-name="category">
             <span class="level-start">
-                <span class="level-item">KOR-Data 컴퓨터과학</span>
+                <span class="level-item">KOR-컴퓨터과학</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
