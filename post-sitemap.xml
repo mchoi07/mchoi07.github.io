@@ -8,6 +8,14 @@
     </url>
 
     <url>
+        <loc>https://mchoi07.github.io/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/</loc>
+        <lastmod>2019-12-08T02:38:14.060Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>https://mchoi07.github.io/2019/11/18/sftp/</loc>
         <lastmod>2019-12-08T00:54:57.112Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -50,14 +58,6 @@
     <url>
         <loc>https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/</loc>
         <lastmod>2019-12-08T00:31:43.999Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>https://mchoi07.github.io/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/</loc>
-        <lastmod>2019-12-07T21:27:16.763Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
