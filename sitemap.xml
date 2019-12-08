@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://mchoi07.github.io/2019/07/30/output-analysis/</loc>
+    <loc>https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/</loc>
     
-    <lastmod>2019-12-07T22:26:44.358Z</lastmod>
+    <lastmod>2019-12-08T00:27:54.379Z</lastmod>
     
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/2019/07/23/input-analysis/</loc>
     
-    <lastmod>2019-12-07T22:06:57.883Z</lastmod>
+    <lastmod>2019-12-07T23:19:24.451Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://mchoi07.github.io/2019/07/30/output-analysis/</loc>
+    
+    <lastmod>2019-12-07T23:19:09.940Z</lastmod>
     
   </url>
   
@@ -19,13 +26,6 @@
     <loc>https://mchoi07.github.io/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/</loc>
     
     <lastmod>2019-12-07T21:27:16.763Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/</loc>
-    
-    <lastmod>2019-12-07T20:40:18.441Z</lastmod>
     
   </url>
   
