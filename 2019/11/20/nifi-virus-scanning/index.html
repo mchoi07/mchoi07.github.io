@@ -17,7 +17,7 @@
 <meta property="og:description" content="To protect our system and computer we should make sure that data which we download is clean. Everytime we bring data to our system or user upload data such as file attachments, we must make sure that">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
-<meta property="og:updated_time" content="2019-12-08T00:27:54.379Z">
+<meta property="og:updated_time" content="2019-12-08T00:31:43.999Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;11&#x2F;20&#x2F;nifi-virus-scanning&#x2F;thumbnail.jpg">
 
@@ -258,7 +258,7 @@
 <figure class="highlight python hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">import</span> sys</span><br><span class="line"><span class="hljs-keyword">import</span> requests</span><br><span class="line"></span><br><span class="line"><span class="hljs-keyword">if</span> __name__ ==<span class="hljs-string">'__main__'</span>:</span><br><span class="line">      url = <span class="hljs-string">'http://localhost:9090/scan'</span></span><br><span class="line">      payload = &#123;<span class="hljs-string">'name'</span>: <span class="hljs-string">'value1'</span>&#125;</span><br><span class="line">      systemin = sys.stdin</span><br><span class="line">      files = &#123;<span class="hljs-string">'file'</span>: systemin&#125;</span><br><span class="line">      r = requests.post(url, files=files, data=payload)</span><br><span class="line">      <span class="hljs-keyword">if</span> <span class="hljs-string">'false'</span> <span class="hljs-keyword">in</span> r.text:</span><br><span class="line">         sys.stdout.write(<span class="hljs-string">"False"</span>)</span><br><span class="line">          </span><br><span class="line">      sys.stdout.write(<span class="hljs-string">"True"</span>)</span><br></pre></td></tr></table></figure>
 
 <p>If a file is clean, it will have an Attribute value <code>True</code>. If it’s not an attribute value will look like this <code>FalseTrue</code> . We will route our files based one this value. Let’s check the configuration of <code>RouteOnAttribute</code>.</p>
-<p>![RouteOnAttribute Configuration](/2019/11/20/nifi-virus-scanning/RouteOnAttribute Configuration.png)</p>
+<p><img src="/2019/11/20/nifi-virus-scanning/RouteOnAttribute.png" alt="RouteOnAttribute Configuration"></p>
 <p>It will let your nifi to send your files to next processor only if the files are clean. </p>
 <h2 id="4-Conclusion"><a href="#4-Conclusion" class="headerlink" title="4. Conclusion"></a>4. Conclusion</h2><p>It might not be only way to do this process. However, both Nifi and Clam are open source, so we don’t need to purchase any other license like Mcafee. Also with these simple tools we could process the files in realtime, and it works fairly well! Hopefully you enjoy this article. If you have a question or comment, you are very welcome to email me at any time. </p>
 <h5 id="References"><a href="#References" class="headerlink" title="References"></a>References</h5><p><a href="https://www.tutorialspoint.com/apache_nifi/apache_nifi_introduction.html" target="_blank" rel="external nofollow noopener noreferrer">link1</a><br><a href="https://dev.solita.fi/2015/06/02/rest-virusscan.html" target="_blank" rel="external nofollow noopener noreferrer">link2</a><br><a href="https://hub.docker.com/r/lokori/clamav-rest/" target="_blank" rel="external nofollow noopener noreferrer">link3</a><br><a href="https://hub.docker.com/r/mkodockx/docker-clamav" target="_blank" rel="external nofollow noopener noreferrer">link4</a></p>
@@ -304,8 +304,8 @@
         </div>
         
         <div class="level-end card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/07/30/output-analysis/">
-                Simulation 04 - Output Analysis <i class="fas fa-chevron-right"></i>
+            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/11/18/sftp/">
+                SFTP <i class="fas fa-chevron-right"></i>
             </a>
         </div>
         
@@ -395,6 +395,14 @@
         <a class="level is-marginless" href="/categories/eng-data-engineering/" data-link-name="category">
             <span class="level-start">
                 <span class="level-item">ENG-Data Engineering</span>
+            </span>
+            <span class="level-end">
+                <span class="level-item tag">1</span>
+            </span>
+        </a></li><li>
+        <a class="level is-marginless" href="/categories/eng-devsecops/" data-link-name="category">
+            <span class="level-start">
+                <span class="level-item">ENG-DevSecOps</span>
             </span>
             <span class="level-end">
                 <span class="level-item tag">1</span>
