@@ -2,24 +2,23 @@
 <html lang="en">
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>Simulation 04 - Output Analysis</title>
+<title>KOR 머신러닝 속성코스 01 - Overview</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<link rel="canonical" href="https://mchoi07.github.io/2019/07/30/output-analysis/">
+<link rel="canonical" href="https://mchoi07.github.io/2019/12/13/mlcrash01-overview/">
 
 
-    <meta name="description" content="Ananyzing the ouput of a simulation model is important. How can we be sure that our output is proper and will not hurt an experiment result using those outputs.">
-<meta name="keywords" content="Simulation">
+    <meta name="description" content="구글의 Tensorflow로 배워보는 머신러닝 속성학습 지금부터 시작합니다.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Simulation 04 - Output Analysis">
-<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;30&#x2F;output-analysis&#x2F;index.html">
+<meta property="og:title" content="KOR 머신러닝 속성코스 01 - Overview">
+<meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;13&#x2F;mlcrash01-overview&#x2F;index.html">
 <meta property="og:site_name">
-<meta property="og:description" content="Ananyzing the ouput of a simulation model is important. How can we be sure that our output is proper and will not hurt an experiment result using those outputs.">
+<meta property="og:description" content="구글의 Tensorflow로 배워보는 머신러닝 속성학습 지금부터 시작합니다.">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;30&#x2F;output-analysis&#x2F;thumnail.jpg">
-<meta property="og:updated_time" content="2019-12-08T00:39:43.228Z">
+<meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;13&#x2F;mlcrash01&#x2F;thumbnail.png">
+<meta property="og:updated_time" content="2019-12-14T01:23:11.672Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;07&#x2F;30&#x2F;output-analysis&#x2F;thumnail.jpg">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2019&#x2F;12&#x2F;13&#x2F;mlcrash01&#x2F;thumbnail.png">
 
 
 
@@ -27,10 +26,10 @@
     <meta name="naver-site-verification" content="48beb5f578053c0c5f127b4198a57270bad360ca">
 
 
-<link rel="canonical" href="https://mchoi07.github.io/2019/07/30/output-analysis/">
+<link rel="canonical" href="https://mchoi07.github.io/2019/12/13/mlcrash01-overview/">
 
 
-<link rel="alternative" href="/feed.xml" title="Simulation 04 - Output Analysis" type="application/xml">
+<link rel="alternative" href="/feed.xml" title="KOR 머신러닝 속성코스 01 - Overview" type="application/xml">
 
 
 
@@ -115,7 +114,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/" data-link-name="navigatorLogo">
             
-                <img src="/images/logo.png" alt="Simulation 04 - Output Analysis" height="28">
+                <img src="/images/logo.png" alt="KOR 머신러닝 속성코스 01 - Overview" height="28">
             
             </a>
         </div>
@@ -168,7 +167,7 @@
     
     <div class="card-image">
         <span class="image is-7by1">
-            <img class="thumbnail" src="/2019/07/30/output-analysis/thumnail.jpg" alt="Simulation 04 - Output Analysis">
+            <img class="thumbnail" src="/2019/12/13/mlcrash01/thumbnail.png" alt="KOR 머신러닝 속성코스 01 - Overview">
         </span>
     </div>
     
@@ -176,10 +175,10 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2019-07-30T20:40:25.000Z">2019-07-30</time>
+                <time class="level-item has-text-grey" datetime="2019-12-14T01:15:30.000Z">2019-12-13</time>
                 
                 <div class="level-item">
-                <a class="has-link-grey -link" href="/categories/eng-statistics/">ENG-Statistics</a>
+                <a class="has-link-grey -link" href="/categories/machine-learning/">Machine Learning</a>
                 </div>
                 
                 
@@ -189,95 +188,23 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">
             
-                Simulation 04 - Output Analysis
+                KOR 머신러닝 속성코스 01 - Overview
             
         </h1>
         
         <hr>
         
         <div class="content">
-            <p>Ananyzing the ouput of a simulation model is important. How can we be sure that our output is proper and will not hurt an experiment result using those outputs. </p>
+            <p>구글의 Tensorflow로 배워보는 머신러닝 속성학습 지금부터 시작합니다. </p>
 <a id="more"></a>
 
-<p>Keep this in mind - out is rearely i.i.d. Why do we worry about output? In put processes driving a simulation are random variables. It means our output from the simulation must be random. If we runs the simulation it only yields estimates of measure of system performace, and these estimators are themselves random variables, and are therfore subject to sampling error. Sampling error must be taken into account to make valid inferences concerning system performance. </p>
-<p><strong>Measures of Interest</strong></p>
-<ul>
-<li>Means - what is the mean customer waiting time? </li>
-<li>Variances - how much is the waiting time liable to vary?</li>
-<li>Quantiles - what’s the 99% quantile of the line length in a certain queue?</li>
-<li>Sucess probabilities - will my job be completed on time?</li>
-<li>Would like point estimators and confidence intervals for the above. </li>
-</ul>
-<p>There are two general types of simulations with respect to output analysis. To facilitate the presentation, we identify two types of simulations with respect to output analysis: </p>
-<ul>
-<li><em>Finite-Horizon (Terminating) Simulations</em> - Interested in short-term performance<ul>
-<li>The termincation of finite-horizon simulation takes place at a specific time or is caused by the occurrence of a specific event.</li>
-<li>EX1 - Mass transit system during rush hour</li>
-<li>EX2 - Distribution system over one month</li>
-</ul>
-</li>
-<li><em>Steady-State simulations</em> - Interested in long-term performance<ul>
-<li>The purpose of <em>steady-state simulation</em> is to study the long-run behavior of a system. A performance measure is a steady-state parameter if it is a characteristic of the equilibrium distribution of an output process. </li>
-<li>EX1 - Continuously operating communication system where the objective is the computation of the mean delay of a packet in the long run</li>
-<li>EX2 - Distribution system over a long period of time</li>
-<li>EX3 - Markov chains</li>
-</ul>
-</li>
-</ul>
-<p><strong>Finite-Horizon Simulation</strong></p>
-<p>First thing we have to do to conduct this simulation is getting expected values from replications. So basically, we need to decide a number of independetn replications (IR). IR estimates Var($\bar{Y}_m$) by conducting $r$ independent simulation runs (replications) of the system under study, where each replication consists of $m$ observations. It is easy to make the replications independent - just re-initialize each replication with a different pseudo-random number seed Sample means from replication</p>
-<p>If each run is started under the same operating conditions (e.g., all queues empty and idle), then the replication sample means $Z_1, Z_2, . . . , Z_r$ are $i.i.d.$ random variables. </p>
-<p><img src="/2019/07/30/output-analysis/02.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/04.png" alt=""></p>
-<p>Suppose we want to estimate the expected average waiting time for the first m = 5000 customers at the bank. We make r = 5 independent replications of the system, each initialized empty and<br>idle and consisting of 5000 waiting times. The resulting replicate means are:</p>
-<p><img src="/2019/07/30/output-analysis/01.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/05.png" alt=""></p>
-<p><strong>Steady-state simulation</strong></p>
-<p>How about we need to simulate the entire time line? We should consider to use a steady-state simulation. Estimate some parameter of interest, e.g., the mean customer waiting time or the expected profit produced by a certain factory configuration. In particular, suppose the mean of this output is the unknown quantity $\mu$. We’ll use the sample mean $\bar{Y}_n$ to estimate $\mu$</p>
-<p>We must accompany the value of any point extimator with a measure of its variance. In stead of Var($\bar{Y}_n)$ we canestimate the <em>variance parameter</em>,</p>
-<p><img src="/2019/07/30/output-analysis/06.png" alt=""></p>
-<p>Thus, $\sigma^2$ is imply the sume of all covariances! $\sigma^2$ pops up all over the place: simulation output analysis, Brownian motions, fnancial engineering application, etc. </p>
-<p><img src="/2019/07/30/output-analysis/07.png" alt=""></p>
-<p>Many methods for estimating $\sigma^2$ and for conducting steady-state output analysis in general:</p>
-<ol>
-<li><p>Batch means</p>
-<p>The method of <em>batch means</em> (BM) is often used to estimate $\sigma^2$ and to calculate confidence intervals for $\mu$</p>
-<p>Idea: Divide one long simulation run into a number of contiguous batches, and then appeal to a central limit theorem to assume that the resulting batch sample means are approximately i.i.d. normal. </p>
-<p>In particular, suppose that we partition $Y_1, Y_2, . . . , Y_n$ into $b$ nonoverlapping, contiguous batches, each consisting of $m$ observations (assume that $n = bm$) </p>
-<p><img src="/2019/07/30/output-analysis/08.png" alt=""></p>
-<p>The $i$th batch mean is the sample mean of the $m$ observations from batch $i = 1, 2, . . . , b$</p>
-<p><img src="/2019/07/30/output-analysis/10.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/11.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/12.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/13.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/14.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/15.png" alt=""></p>
-</li>
-</ol>
-<p>$E[H]$ decreases in b, though it smooths out around b = 30. A common recommendation is to take b =. 30 and concentrate on increasing the batch size m as much as possible. </p>
-<p>The technique of BM is intuitively appealing and easy to understand. </p>
-<p>But problems can come up if the Yj ’s are not stationary (e.g., if significant initialization bias is present), if the batch means are not normal, or if the batch means are not independent. </p>
-<p>If any of these assumption violations exist, poor confidence interval coverage may result — unbeknownst to the analyst.</p>
-<p>To ameliorate the initialization bias problem, the user can truncate some of the data or make a long run </p>
-<p>In addition, the lack of independence or normality of the batch means can be countered by increasing the batch size m.</p>
-<p><img src="/2019/07/30/output-analysis/16.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/17.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/18.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/19.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/20.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/21.png" alt=""></p>
-<p><img src="/2019/07/30/output-analysis/22.png" alt=""></p>
-<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://www.computerhope.com/jargon/s/stdin.htm" target="_blank" rel="external nofollow noopener noreferrer">Thumnail</a><br>Georgia Tech’s <code>ISYE6644</code> class content</p>
+<p>안녕하세요 AI Nomad 최민규입니다. </p>
+<p>앞으로 진행하게 될 AI에 관련된 다양한 프로젝트들과 콘텐츠에 앞서 어떤 프로젝트로 시작하면 좋을까 생각하다가 구글에서 있는 Machine Learning Crash 코스를 go over 하면서 기본적인 머신러닝에 대한 개념을 정리하면 어떨까 생각해 봤습니다.</p>
+<p>구글에서는 이 코스를 이미 한국어로 번역해 두었지만. 번역이 조금 서툴더군요. 그래서 제가 구글의 자료를 쭉 정리하며 조금 더 자세한 설명을 붙여가면서 이 컨탠츠를 진행해 보도록 하겠습니다. </p>
+<h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="external nofollow noopener noreferrer">Thumnail</a><br><a href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="external nofollow noopener noreferrer">Google Machine Learning Crash Course</a></p>
+<hr>
+<p><em>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow noopener noreferrer">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="external nofollow noopener noreferrer">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies" target="_blank" rel="external nofollow noopener noreferrer">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</em></p>
 
-        </div>
-        
-        <div class="level is-size-7 is-uppercase post-tags">
-            <div class="level-start">
-                <div class="tags">
-                    <span class="is-size-6 has-text-grey has-mr-7 tag-icon"><i class="fas fa-tag"></i></span>
-                    <a class="tag -link" href="/tags/simulation/" rel="tag">Simulation</a>
-                </div>
-            </div>
         </div>
         
         
@@ -297,21 +224,15 @@
 <div class="card card-transparent">
     <div class="level post-navigation is-flex-wrap is-mobile">
         
-        <div class="level-start card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey article-nav-prev" href="/2019/11/18/sftp/">
-                <i class="fas fa-chevron-left"></i> Secure File Transfer Protocol (SFTP)
-            </a>
-        </div>
-        
-        <div class="with-prev card to-home">
+        <div class="level-item card to-home">
             <a data-link-name="pagenator" class="level level-item has-link-grey" href="/">
                 <i class="fas fa-home"></i> Home
             </a>
         </div>
         
         <div class="level-end card">
-            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/07/23/input-analysis/">
-                Simulation 03 - Input Analysis <i class="fas fa-chevron-right"></i>
+            <a data-link-name="pagenator" class="level level-item has-link-grey  article-nav-next" href="/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/">
+                암호화복호화 <i class="fas fa-chevron-right"></i>
             </a>
         </div>
         
@@ -411,7 +332,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="Simulation 04 - Output Analysis" height="28">
+                    <img src="/images/logo.png" alt="KOR 머신러닝 속성코스 01 - Overview" height="28">
                 
                 </a>
                 <p class="is-size-7">
