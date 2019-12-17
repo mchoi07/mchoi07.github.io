@@ -8,11 +8,27 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Sat, 14 Dec 2019 01:26:04 GMT</pubDate>
+    <pubDate>Tue, 17 Dec 2019 02:22:36 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>KOR 머신러닝 속성코스 01 - Overview</title>
+      <title>(KOR) 머신러닝 속성코스 02 - 기본용어</title>
+      <link>https://mchoi07.github.io/2019/12/16/mlcrash02-keyterm/</link>
+      <guid>https://mchoi07.github.io/2019/12/16/mlcrash02-keyterm/</guid>
+      <pubDate>Tue, 17 Dec 2019 01:52:35 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;&lt;code&gt;supervised&lt;/code&gt;  &lt;code&gt;unsupervised&lt;/code&gt; &lt;code&gt;feature&lt;/code&gt; &lt;code&gt;label&lt;/code&gt; … 머신러닝을 시작하게 되면 새로 배워야 하는 용어들이 많죠? 하지만 이러한 용어들을 자신의 개념으로 잘 정리하는 것이 참 중요합니다. 왜냐하면, 우리가 앞으로 배우게 될 머신러닝의 기초가 되기 때문이죠…&lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p><code>supervised</code>  <code>unsupervised</code> <code>feature</code> <code>label</code> … 머신러닝을 시작하게 되면 새로 배워야 하는 용어들이 많죠? 하지만 이러한 용어들을 자신의 개념으로 잘 정리하는 것이 참 중요합니다. 왜냐하면, 우리가 앞으로 배우게 될 머신러닝의 기초가 되기 때문이죠…</p><a id="more"></a><hr><p>안녕하세요 AI Nomad 최민규입니다. 머신러닝 속성코스 두 번째 세션에서는 머신러닝에서 사용되는 기본적인 용어들을 정리해보려 합니다. </p><h4 id="1-Supervised-and-Unsupervised-Learning"><a href="#1-Supervised-and-Unsupervised-Learning" class="headerlink" title="1. Supervised and Unsupervised Learning"></a>1. Supervised and Unsupervised Learning</h4><p>머신러닝을 처음 시작하게 되면 가장 먼저 알게 되는 용어는 <code>Supervised Learning</code>  과 <code>Unsupervised Learning</code> 입니다.  </p><p>영어로 supervised라고 하면 감독이 돼다, 관리되다 정도로 해석됩니다. 따라서 supervised learning 을 직역하면 감독의 지시 아래 배워지다 정도로 해석됩니다. 우리가 무언가를 배울 때 좋은 감독이 있으면 배움이 편합니다. 왜냐하면, 그들이 우리가 무엇을 배워야 할지 감독해주고 지시해주기 때문입니다. </p><p>머신러닝에서 supervised learning 도 비슷한 의미가 있다고 할 수 있습니다. 컴퓨터가 사람의 감독 아래 지시되고 학습되게 되는 거죠. 감독들은 선수들을 지도하고 지시합니다. A와 B를하라고 왜냐하면 감독들은 A와 B를 했을때 C라는 결과가 나올 거를 경험을 통해 알기 때문이죠. 머신러닝에서 A 와 B 를 feature 이라고 부릅니다. 그리고 C 를 label 이라고 부르죠.  supervised learning 을 학습시키기 위해서는 feature  와 label 이 필요합니다. 감독이 있기 때문이죠.  </p><p>그렇다면 감독이 존재하지 않는 unsupervised learning 은 어떨까요? 감독은 없고 선수들만 있는 팀이 있다고 가정합시다. 선수들은 매주 경기에 나가야 하죠. 구단주는 선수들에게 리그 3위 안에 들지 않으면 팀을 해체하겠다고 합니다. 감독이 없다는 것은 label 이 없다는 것이죠. 선수들은 직관적으로 어떠한 훈련을 해야 할지는 알 수 있을 것입니다. 하지만 감독의 경험이 없는 것이죠. 그러므로 unsupervised learning 에는 feature 만이 존재합니다. 이 상황에서 선수들은 어떻게 감독 없이 팀을 빌딩 할 수 있을까요? 스스로 답을 찾아야죠. 훈련과 경기를 통한 <code>trial and error</code> 즉 시행착오를 거쳐서 선수들 스스로 배워가는 수밖에 없겠죠. 이것이 머신러닝에서 unsupervised learning 이라고 불리는 것입니다. 데이터에는 feature 들만 존재하고 label 이 없습니다. 따라서 여러 알고리즘들이 feature 을 가지고 시행착오를 거쳐 가장 이상적인 label 을 찾아가는 것을 우리는 unsupervised learning 이라고 합니다</p><h4 id="2-Labels-결과값"><a href="#2-Labels-결과값" class="headerlink" title="2. Labels (결과값)"></a>2. Labels (결과값)</h4><p>앞에서 나온 <code>label</code>은 어떠한 x들에 대한 y 즉 결과값이라고 정리 할 수 있겠습니다. 예를 들면, 미래의 주식가격, 사진 속에 등장한 동물의 종류, 어떤 소리에 의미 등이 있겠군요. </p><h4 id="3-Feature-원인"><a href="#3-Feature-원인" class="headerlink" title="3. Feature (원인)"></a>3. Feature (원인)</h4><p><code>Feature</code>은 간단하게 어떤 결과에 대한 원인입니다. y라는 결과에 대한 x라는 원인이죠. 대학교 성적을 결과라고 한다면 이 결과에 대한 feature 즉 원인으로는 하루 공부 시간, 연애 여부, 아르바이트 여부, 등등이 있겠네요. </p><h4 id="4-Model-모델"><a href="#4-Model-모델" class="headerlink" title="4. Model (모델)"></a>4. Model (모델)</h4><p><code>모델</code>은 feature와 feature 사이 또 feature와 label의 관계라고 보시면 됩니다. 모델은 A와 B라는 feature들의 관계를 설명하고 A,B 라는 feature들과 C라는 label의 관계를 설명합니다. 이들의 관계를 잘 설명하는 모델을 우리는 좋은 모델이라고 부르며 좋은 결과를 내게 됩니다. </p><h4 id="5-Train-학습"><a href="#5-Train-학습" class="headerlink" title="5. Train (학습)"></a>5. Train (학습)</h4><p>우리가 모델을 이야기할 때 <code>train</code> 시킨다 <code>학습</code> 시킨다는 용어를 많이 사용합니다. 모델을 학습시킨다 즉 train 한다는 말은 쉽게 말하면 모델을 만든다 모델을 학습시킨다고 이해하시면 되겠습니다. 그렇다면 모델을 만들고 학습시킨다는데 어떻게 무엇으로 학습시킨다는 거죠? 바로 데이터입니다. 데이터에 존재하는 많으면 많은 적으면 적은 feature들과 lable을 통해서 모델을 학습시키는 것입니다. </p><p>우리가 강아지에게 손을 달라고 했을 때 손을 주는 훈련을 한다고 가정을 해봅시다. 강아지가 이 훈련을 습득하는 방법은 보통 다음과 같겠죠</p><p>손 -&gt; 간식 (o)<br>발 -&gt; 간식 (x)<br>누움 -&gt; 간식 (x)<br>손 -&gt; 간식 (o)<br>손 -&gt; 간식 (o)<br>손 -&gt; 간식 (o)</p><p>강아지는 손을 줬을 때 간식을 먹었다는 데이터를 기반으로 학습했고 사람이 손이라고 이야기했을 때 손을 주는 행동을 하게 되죠. 머신러닝도 마찮가지로 데이터를 기반으로 어떤 모델을 학습하고, 우리가 모델에 input을 주었을 때 모델은 학습된 데이터를 바탕으로 어떤 output 즉 <code>inference</code> 를 만들어 내게 됩니다. </p><h4 id="6-Inference-암시"><a href="#6-Inference-암시" class="headerlink" title="6. Inference (암시)"></a>6. Inference (암시)</h4><p><code>Inference</code>는 unlabeled example을 학습된 모델에 적용할 때 사용합니다. 즉 모델을 학습시키고 새로운 input을 모델에 넣었을 때 모델이 만드는 output을 inference라고 부르죠. 결국 이 output도 예측값이기 때문에 결과를 암시한다 라는 의미로 inference라고 부릅니다. </p><h4 id="7-요약"><a href="#7-요약" class="headerlink" title="7. 요약"></a>7. 요약</h4><p>데이터를 빼놓고는 머신러닝을 이야기 할 수 없습니다. 데이터가 quantitative or qualitative 한지를 떠나서 머신러닝에서 데이터를 보는 관점은 딱 두 가지 입니다. <code>feature</code> 와 <code>label</code>. 이러한 feature와 label의 관계를 설명하는 것이 모델이고, 모델을 만들기 위해서는 데이터를 가지고 모델을 <code>train</code> (학습) 시키는 과정이 필요합니다. 모델을 통해 생성된 결과값 즉 prediction이 바로 <code>inference</code> 가 되게 되는 것이죠. </p><p>이렇게 이번 세션에서는 기본적인 머신러닝 용어들에 대해 배워봤습니다. 다음 세션은 본격적으로 모델에 사용되는 알고리즘과 알고리즘이 학습되는 로직에 대한 세션을 준비하겠습니다. </p><p><strong><a href="https://mchoi07.github.io/2019/12/13/mlcrash01-overview/">&gt;&gt; Previous: Overview</a></strong></p><h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://www.kdnuggets.com/2016/05/machine-learning-key-terms-explained.html" target="_blank" rel="external nofollow noopener noreferrer">Thumnail</a><br><a href="https://developers.google.com/machine-learning/crash-course" target="_blank" rel="external nofollow noopener noreferrer">Google Machine Learning Crash Course</a></p><hr><p><em>Except as otherwise noted, the content of this page is licensed under the <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow noopener noreferrer">Creative Commons Attribution 4.0 License</a>, and code samples are licensed under the <a href="https://www.apache.org/licenses/LICENSE-2.0" target="_blank" rel="external nofollow noopener noreferrer">Apache 2.0 License</a>. For details, see the <a href="https://developers.google.com/site-policies" target="_blank" rel="external nofollow noopener noreferrer">Google Developers Site Policies</a>. Java is a registered trademark of Oracle and/or its affiliates.</em></p>]]></content:encoded>
+      
+      <comments>https://mchoi07.github.io/2019/12/16/mlcrash02-keyterm/#disqus_thread</comments>
+    </item>
+    
+    <item>
+      <title>(KOR) 머신러닝 속성코스 01 - Overview</title>
       <link>https://mchoi07.github.io/2019/12/13/mlcrash01-overview/</link>
       <guid>https://mchoi07.github.io/2019/12/13/mlcrash01-overview/</guid>
       <pubDate>Sat, 14 Dec 2019 01:15:30 GMT</pubDate>
@@ -28,7 +44,7 @@
     </item>
     
     <item>
-      <title>암호화복호화</title>
+      <title>(KOR) 암호화복호화</title>
       <link>https://mchoi07.github.io/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/</link>
       <guid>https://mchoi07.github.io/2019/12/07/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/</guid>
       <pubDate>Sat, 07 Dec 2019 21:22:36 GMT</pubDate>
@@ -44,7 +60,7 @@
     </item>
     
     <item>
-      <title>Realtime Virus Scanning</title>
+      <title>(ENG) Realtime Virus Scanning</title>
       <link>https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/</link>
       <guid>https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/</guid>
       <pubDate>Wed, 20 Nov 2019 20:14:06 GMT</pubDate>
@@ -60,7 +76,7 @@
     </item>
     
     <item>
-      <title>Secure File Transfer Protocol (SFTP)</title>
+      <title>(ENG) Secure File Transfer Protocol</title>
       <link>https://mchoi07.github.io/2019/11/18/sftp/</link>
       <guid>https://mchoi07.github.io/2019/11/18/sftp/</guid>
       <pubDate>Tue, 19 Nov 2019 00:34:49 GMT</pubDate>
@@ -76,7 +92,7 @@
     </item>
     
     <item>
-      <title>Simulation 04 - Output Analysis</title>
+      <title>(ENG) Simulation 04 - Output Analysis</title>
       <link>https://mchoi07.github.io/2019/07/30/output-analysis/</link>
       <guid>https://mchoi07.github.io/2019/07/30/output-analysis/</guid>
       <pubDate>Tue, 30 Jul 2019 20:40:25 GMT</pubDate>
@@ -92,7 +108,7 @@
     </item>
     
     <item>
-      <title>Simulation 03 - Input Analysis</title>
+      <title>(ENG) Simulation 03 - Input Analysis</title>
       <link>https://mchoi07.github.io/2019/07/23/input-analysis/</link>
       <guid>https://mchoi07.github.io/2019/07/23/input-analysis/</guid>
       <pubDate>Tue, 23 Jul 2019 20:40:08 GMT</pubDate>
@@ -108,7 +124,7 @@
     </item>
     
     <item>
-      <title>Simulation 02 - Random variable</title>
+      <title>(ENG) Simulation 02 - Random variable</title>
       <link>https://mchoi07.github.io/2019/07/19/random-variable/</link>
       <guid>https://mchoi07.github.io/2019/07/19/random-variable/</guid>
       <pubDate>Fri, 19 Jul 2019 04:00:00 GMT</pubDate>
@@ -124,7 +140,7 @@
     </item>
     
     <item>
-      <title>Simulation 01 - Random Number</title>
+      <title>(ENG) Simulation 01 - Random Number</title>
       <link>https://mchoi07.github.io/2019/07/18/random-number/</link>
       <guid>https://mchoi07.github.io/2019/07/18/random-number/</guid>
       <pubDate>Thu, 18 Jul 2019 13:27:50 GMT</pubDate>
