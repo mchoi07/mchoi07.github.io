@@ -8,8 +8,24 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
     
     <description></description>
-    <pubDate>Tue, 17 Dec 2019 02:22:36 GMT</pubDate>
+    <pubDate>Fri, 24 Jan 2020 03:28:45 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>(ENG) Feature-Engineering-101</title>
+      <link>https://mchoi07.github.io/2020/01/23/feature-engineering-101/</link>
+      <guid>https://mchoi07.github.io/2020/01/23/feature-engineering-101/</guid>
+      <pubDate>Fri, 24 Jan 2020 03:20:01 GMT</pubDate>
+      <description>
+      
+        &lt;p&gt;If you ask yourself what’s the most important thing in machine learning, what’s your answer? All data scientist would have different answers. &lt;/p&gt;
+      
+      </description>
+      
+      <content:encoded><![CDATA[<p>If you ask yourself what’s the most important thing in machine learning, what’s your answer? All data scientist would have different answers. </p><a id="more"></a><p>Among the other many answers, I believe feature engineering is one of the most important in machine learning. Sometimes, it’s a more critical step than a model selection and training a model because a model cannot improve a model itself even though we put a lot of effort on a hyper parameter turning. However, well selected/extracted features could be applied to many different models and improve a performance. </p><p>A feature engineering includes feature selection and feature extraction. A feature selection is trial-error process to select relevant features from existing features. Since all features are simply selected from original features it’s easy to interpret what those features means. However, it is difficult to consider a relationship in selected features. </p><p>On the other hands, a feature extraction is more like functional process to extract relevant features from existing features. It requires a form of function which enable an algorithm to create/extract a new set of features. A relationship between features will be considered and number of features could be significantly reduced. Yet, an interpretation of extracted features is not easy.</p><p>We should use different methods of feature engineering depending on a machine learning algorithm we want to use. </p><p>In supervised learning, we could select features form <code>Information gain</code>, <code>Stepwise regression</code>, <code>LASSO</code>, <code>Genetic algorithms</code>, etc. If we want to extract features, <code>Partial Least Squares (PLS)</code> is an option. </p><p>In unsupervised learning, we could do a feature selection with <code>PCA loading</code>; a feature extraction uses <code>Principal component analysis (PCA)</code>, <code>Wavelets transforms</code>, <code>Autoencoder</code>, etc. </p><h5 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h5><p><a href="https://pngimage.net/features-png-7/" target="_blank" rel="external nofollow noopener noreferrer">Thumnail</a></p>]]></content:encoded>
+      
+      <comments>https://mchoi07.github.io/2020/01/23/feature-engineering-101/#disqus_thread</comments>
+    </item>
     
     <item>
       <title>(KOR) 머신러닝 속성코스 02 - 기본용어</title>
