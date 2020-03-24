@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mchoi07.github.io/2020/03/23/Naive%20Bayes%20from%20scratch/</loc>
+    
+    <lastmod>2020-03-24T01:52:34.271Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mchoi07.github.io/2020/01/23/feature-engineering-101/</loc>
     
     <lastmod>2020-01-24T03:49:13.066Z</lastmod>
