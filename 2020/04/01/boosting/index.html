@@ -17,7 +17,7 @@
 <meta property="og:description" content="In machine learning, boosting is an ensemble meta-algorithm for primarily reducing bias, and also variance in supervised learning, and a family of machine learning algorithms that convert weak learner">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
-<meta property="og:updated_time" content="2020-04-02T02:22:18.147Z">
+<meta property="og:updated_time" content="2020-04-02T02:25:12.731Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
 
@@ -202,14 +202,14 @@
 <a id="more"></a>
 
 <h1 id="Boosting"><a href="#Boosting" class="headerlink" title="Boosting"></a>Boosting</h1><p>Today, I would like to introduce <code>Boosting</code> method in Machine Learning. Basically, <code>Boosting</code> is a set of algorithms (classifiers) which changes weak learner to strong learners. It is one of the ensemble methods for improving the model predictions of any given learning algorithm. However, unlike the regular ensemble method which we group several model and use them in parallel, <strong>Boosting</strong> is using a single model in sequential order with differnt weights. </p>
-<p><strong>Boosting</strong> is also using ramdom sampling with a replacement. It will start training model from Sample 1 to Sample N. In each training, there would be well-classified data and wrong-classified data. Since it allows a replacement, some wrong classified data might be included in different samples or not.<br>![Boosting Algorithm](/2020/04/01/boostingBoosting Algorithm.png)</p>
+<p><strong>Boosting</strong> is also using ramdom sampling with a replacement. It will start training model from Sample 1 to Sample N. In each training, there would be well-classified data and wrong-classified data. Since it allows a replacement, some wrong classified data might be included in different samples or not.<br>![Boosting Algorithm](/2020/04/01/boosting/Boosting Algorithm.png)</p>
 <p>Since each previous model affect a current model by assigning weights to data which it coudln’t classify correctly, this is not parallel - it’s sequential. At the end, it will use all trained models with different weights and generate the output. One of the disadvantages of Boosting is that it easily get corrupted by outliers because it will assign heavy weights to those outliers and it will mislead the models.</p>
-<h3 id="AdaBoost-Adaptive-Boosting"><a href="#AdaBoost-Adaptive-Boosting" class="headerlink" title="AdaBoost (Adaptive Boosting)"></a>AdaBoost (Adaptive Boosting)</h3><p>![Adaboost flow chart](/2020/04/01/boostingAdaboost flow chart.png)</p>
+<h3 id="AdaBoost-Adaptive-Boosting"><a href="#AdaBoost-Adaptive-Boosting" class="headerlink" title="AdaBoost (Adaptive Boosting)"></a>AdaBoost (Adaptive Boosting)</h3><p>![Adaboost flow chart](/2020/04/01/boosting/Adaboost flow chart.png)</p>
 <p><strong>AdaBoost</strong> works in a way putting more weights on difficult to classify data and less on those already handled well. </p>
 <p>In AdaBoost, we use something called <em>Decision Stumps</em>, the simplest model we could construct on data. It split the data into two subsets based on the feature. To find the best decision stump, we should lay out all features of data along with every possible threshold and look for one gives us best accuracy. </p>
 <p>In this example, I will consturct AdaBoost from the scratch with some mathematical explanation. </p>
 <h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><p>X1 = (−1,0,+), X2 = (−0.5,0.5,+)<br>X3 = (0,1,−), X4 = (0.5,1,−)<br>X5 = (1,0,+), X6 = (1,−1,+)<br>X7 = (0,−1,−),X8 = (0,0,−)</p>
-<p><img src="/2020/04/01/boostingfigure1.png" alt="figure1"></p>
+<p><img src="/2020/04/01/boosting/figure1.png" alt="figure1"></p>
 <p><strong>How to?</strong></p>
 <p>Constructing $D_t$. It’s basically weight of each $i^{th}$ data.</p>
 <p>$D_{t+1}(i)$ = $\frac{D_t(i)}{Z_t} * e^{-\alpha_t}$ if $y_i = h_t(x_i)$<br>$D_{t+1}(i)$ = $\frac{D_t(i)}{Z_t} * e^{\alpha_t}$ if $y_i \ne h_t(x_i)$,</p>
@@ -218,7 +218,7 @@
 <p>$h_t: \epsilon_t = \sum\limits_{i=1}^{m}D_t\vert(y_i\ne h_t(x_i))$ if $(y_i\ne h_t(x_i)$ then 1 otherwise 0​</p>
 <p><strong>Step 1</strong> </p>
 <p>Put an initial random decision stump aka classifier $h_1$.</p>
-<p><img src="/2020/04/01/boostingfigure2.png" alt="figure2"></p>
+<p><img src="/2020/04/01/boosting/figure2.png" alt="figure2"></p>
 <p>h1 is a randomly assinged decision stump.<br>Let’s get $D_1$ = $\frac{1}{m}$, where $m = 8$</p>
 <table>
 <thead>
@@ -503,7 +503,7 @@
 </tr>
 </tbody></table>
 <p>We’ve got new weights for data. d1 was 0.125; it has become 0.097. d2 has become 0.161 from 0.125 because $h_1$ failed to classfy this data. Let’s get the $h_2$ - I was focusing on having all <code>+</code>in the same group. </p>
-<p><img src="/2020/04/01/boostingfigure3.png" alt="figure3"></p>
+<p><img src="/2020/04/01/boosting/figure3.png" alt="figure3"></p>
 <p>If you do same calculation we’ve done above, You will get this table:</p>
 <table>
 <thead>
@@ -726,7 +726,7 @@
 <td>0.082</td>
 </tr>
 </tbody></table>
-<p><img src="/2020/04/01/boostingfigure4.png" alt="figure4"></p>
+<p><img src="/2020/04/01/boosting/figure4.png" alt="figure4"></p>
 <p>A reasoning of $h_3$ is to have all <code>o</code> in a same group. Also, d5 and d6 have never been misclassified, so I want to have a information of d5 and d6 in my model. And the result will be:</p>
 <table>
 <thead>
@@ -873,7 +873,7 @@
 </tr>
 </tbody></table>
 <p>Graphically, it will look like:</p>
-<p><img src="/2020/04/01/boostingfigure5.png" alt="figure5"></p>
+<p><img src="/2020/04/01/boosting/figure5.png" alt="figure5"></p>
 <p>Lastly, the final classifier is $H_{final}(x)=sign(0.255<em>h_1+0.371</em>h_2+0.943*h_3)$</p>
 
         </div>
