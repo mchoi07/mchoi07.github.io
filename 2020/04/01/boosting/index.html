@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-<title>(ENG) Boosting (AdbBoost)</title>
+<title>boosting</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
 <link rel="canonical" href="https://mchoi07.github.io/2020/04/01/boosting/">
@@ -11,13 +11,13 @@
     <meta name="description" content="In machine learning, boosting is an ensemble meta-algorithm for primarily reducing bias, and also variance in supervised learning, and a family of machine learning algorithms that convert weak learner">
 <meta name="keywords" content="Ensemble,Boosting,AbaBoost">
 <meta property="og:type" content="article">
-<meta property="og:title" content="(ENG) Boosting (AdbBoost)">
+<meta property="og:title" content="boosting">
 <meta property="og:url" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;2020&#x2F;04&#x2F;01&#x2F;boosting&#x2F;index.html">
 <meta property="og:site_name">
 <meta property="og:description" content="In machine learning, boosting is an ensemble meta-algorithm for primarily reducing bias, and also variance in supervised learning, and a family of machine learning algorithms that convert weak learner">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
-<meta property="og:updated_time" content="2020-04-02T02:32:52.451Z">
+<meta property="og:updated_time" content="2020-04-02T02:33:50.386Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;mchoi07.github.io&#x2F;img&#x2F;me.jpg">
 
@@ -30,7 +30,7 @@
 <link rel="canonical" href="https://mchoi07.github.io/2020/04/01/boosting/">
 
 
-<link rel="alternative" href="/feed.xml" title="(ENG) Boosting (AdbBoost)" type="application/xml">
+<link rel="alternative" href="/feed.xml" title="boosting" type="application/xml">
 
 
 
@@ -123,7 +123,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/" data-link-name="navigatorLogo">
             
-                <img src="/images/logo.png" alt="(ENG) Boosting (AdbBoost)" height="28">
+                <img src="/images/logo.png" alt="boosting" height="28">
             
             </a>
         </div>
@@ -191,7 +191,7 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-bold">
             
-                (ENG) Boosting (AdbBoost)
+                boosting
             
         </h1>
         
@@ -205,7 +205,678 @@
 <p><strong>Boosting</strong> is also using ramdom sampling with a replacement. It will start training model from Sample 1 to Sample N. In each training, there would be well-classified data and wrong-classified data. Since it allows a replacement, some wrong classified data might be included in different samples or not. </p>
 <p>![Boosting Algorithm](/2020/04/01/boosting/Boosting Algorithm.png)</p>
 <p>Since each previous model affect a current model by assigning weights to data which it coudln’t classify correctly, this is not parallel - it’s sequential. At the end, it will use all trained models with different weights and generate the output. One of the disadvantages of Boosting is that it easily get corrupted by outliers because it will assign heavy weights to those outliers and it will mislead the models.</p>
-<p>H_{final}(x)=sign(0.255<em>h_1+0.371</em>h_2+0.943*h_3)$</p>
+<h3 id="AdaBoost-Adaptive-Boosting"><a href="#AdaBoost-Adaptive-Boosting" class="headerlink" title="AdaBoost (Adaptive Boosting)"></a>AdaBoost (Adaptive Boosting)</h3><p>![Adaboost flow chart](/2020/04/01/boosting/Adaboost flow chart.png)</p>
+<p><strong>AdaBoost</strong> works in a way putting more weights on difficult to classify data and less on those already handled well. </p>
+<p>In AdaBoost, we use something called <em>Decision Stumps</em>, the simplest model we could construct on data. It split the data into two subsets based on the feature. To find the best decision stump, we should lay out all features of data along with every possible threshold and look for one gives us best accuracy. </p>
+<p>In this example, I will consturct AdaBoost from the scratch with some mathematical explanation. </p>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><p>X1 = (−1,0,+), X2 = (−0.5,0.5,+)<br>X3 = (0,1,−), X4 = (0.5,1,−)<br>X5 = (1,0,+), X6 = (1,−1,+)<br>X7 = (0,−1,−),X8 = (0,0,−)</p>
+<p><img src="/2020/04/01/boosting/figure1.png" alt="figure1"></p>
+<p><strong>How to?</strong></p>
+<p>Constructing $D_t$. It’s basically weight of each $i^{th}$ data.</p>
+<p>$D_{t+1}(i)$ = $\frac{D_t(i)}{Z_t} * e^{-\alpha_t}$ if $y_i = h_t(x_i)$<br>$D_{t+1}(i)$ = $\frac{D_t(i)}{Z_t} * e^{\alpha_t}$ if $y_i \ne h_t(x_i)$,</p>
+<p>where $Z_t$ = Normalization Constant = Sum of $D_t$</p>
+<p>and $\alpha_t$ = $\frac{1}{2}ln(\frac{1-\epsilon_t}{\epsilon_t})$.</p>
+<p>$h_t: \epsilon_t = \sum\limits_{i=1}^{m}D_t\vert(y_i\ne h_t(x_i))$ if $(y_i\ne h_t(x_i)$ then 1 otherwise 0​</p>
+<p><strong>Step 1</strong> </p>
+<p>Put an initial random decision stump aka classifier $h_1$</p>
+<p><img src="/2020/04/01/boosting/figure2.png" alt="figure2"></p>
+<p>h1 is a randomly assinged decision stump.<br>Let’s get $D_1$ = $\frac{1}{m}$, where $m = 8$</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+</tbody></table>
+<p>Now, in a second row, I will put 1 if $h_1$ classify $y_i$ incorrectly, else 0. </p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody></table>
+<p>$h_1$ has classified correctly $d_t(1),d_t(3),d_t(4),d_t(5),d_t(6)$</p>
+<p>Once we have $D_1(i)$ and a result of classification by $h_1$ we could calculate $\epsilon_1$, where $h_t: \epsilon_t = \sum\limits_{i=1}^{m}D_t\vert(y_i\ne h_t(x_i))$ if $(y_i\ne h_t(x_i)$ then 1 otherwise 0</p>
+<p>In a thrid row, I will get all $D_1\vert(y_i\ne h_1(x_i)$, and if take sumation of all values, it’s our $\epsilon_1$.</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.375</td>
+<td></td>
+<td></td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0.13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.13</td>
+<td>0.13</td>
+</tr>
+</tbody></table>
+<p>Let’s get $\alpha_1$ and $Z_1$. Remember $Z_t$ = Normalization Constant = Sum of $D_t$, and $\alpha_t$ = $\frac{1}{2}ln(\frac{1-\epsilon_t}{\epsilon_t})$.</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.375</td>
+<td>0.255</td>
+<td>1.000</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0.13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.13</td>
+<td>0.13</td>
+</tr>
+</tbody></table>
+<p>If you see the table above, you could notice that d2, d7, d8 has more weight, 0.13 becase $h_1$ failed to classify them correctly. Based on this information, we could move onto second iteration. In order to calculate $D_2(i)$ we need additional information other than table above.</p>
+<p>$D_{t+1}(i)$ = $\frac{D_t(i)}{Z_t} * e^{-\alpha_t}$ if $y_i = h_t(x_i)$<br>$D_{t+1}(i)$ = $\frac{D_t(i)}{Z_t} * e^{\alpha_t}$ if $y_i \ne h_t(x_i)$</p>
+<p>We need to what what’s $e^{-\alpha_1}$ and $e^{\alpha_1}$</p>
+<p>$e^{-\alpha_1}=0.775$</p>
+<p>$e^{\alpha_1}=1.291$</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.375</td>
+<td>0.255</td>
+<td>1.000</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0.13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.13</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.323</td>
+<td>0.371</td>
+<td>0.968</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.161</td>
+</tr>
+</tbody></table>
+<p>We’ve got new weights for data. d1 was 0.125; it has become 0.097. d2 has become 0.161 from 0.125 because $h_1$ failed to classfy this data. Let’s get the $h_2$ - I was focusing on having all <code>+</code>in the same group. </p>
+<p><img src="/2020/04/01/boosting/figure3.png" alt="figure3"></p>
+<p>If you do same calculation we’ve done above, You will get this table:</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.375</td>
+<td>0.255</td>
+<td>1.000</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0.13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.13</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.323</td>
+<td>0.371</td>
+<td>0.968</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.161</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.16</td>
+</tr>
+</tbody></table>
+<p>$e^{-\alpha_2}=0.490$</p>
+<p>$e^{\alpha_2}=2.041$</p>
+<p>Lastly, let’s do the final iteration.</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.375</td>
+<td>0.255</td>
+<td>1.000</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0.13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.13</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.194</td>
+<td>0.713</td>
+<td>0.968</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.161</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0.1</td>
+<td>0.1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td></td>
+<td>0.049</td>
+<td>0.082</td>
+<td>0.204</td>
+<td>0.204</td>
+<td>0.049</td>
+<td>0.049</td>
+<td>0.082</td>
+<td>0.082</td>
+</tr>
+</tbody></table>
+<p><img src="/2020/04/01/boosting/figure4.png" alt="figure4"></p>
+<p>A reasoning of $h_3$ is to have all <code>o</code> in a same group. Also, d5 and d6 have never been misclassified, so I want to have a information of d5 and d6 in my model. And the result will be:</p>
+<table>
+<thead>
+<tr>
+<th>t</th>
+<th>err</th>
+<th>alpha</th>
+<th>Z</th>
+<th>d1</th>
+<th>d2</th>
+<th>d3</th>
+<th>d4</th>
+<th>d5</th>
+<th>d6</th>
+<th>d7</th>
+<th>d8</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>0.375</td>
+<td>0.255</td>
+<td>1.000</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+<td>0.125</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0.13</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.13</td>
+<td>0.13</td>
+</tr>
+<tr>
+<td>2</td>
+<td>0.323</td>
+<td>0.371</td>
+<td>0.968</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.097</td>
+<td>0.161</td>
+<td>0.161</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.16</td>
+<td>0.16</td>
+</tr>
+<tr>
+<td>3</td>
+<td>0.138</td>
+<td>0.916</td>
+<td>0.943</td>
+<td>0.069</td>
+<td>0.115</td>
+<td>0.069</td>
+<td>0.069</td>
+<td>0.069</td>
+<td>0.069</td>
+<td>0.241</td>
+<td>0.241</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0.07</td>
+<td>0.07</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody></table>
+<p>Graphically, it will look like:</p>
+<p><img src="/2020/04/01/boosting/figure5.png" alt="figure5"></p>
+<p>Lastly, the final classifier is:</p>
+<p>$H_{final}(x)=sign(0.255<em>h_1+0.371</em>h_2+0.943*h_3)$</p>
 
         </div>
         
@@ -271,7 +942,15 @@
         <a class="is-flex" href="#Boosting">
         <span class="has-mr-6">1</span>
         <span>Boosting</span>
-        </a></li></ul>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#AdaBoost-Adaptive-Boosting">
+        <span class="has-mr-6">1.1</span>
+        <span>AdaBoost (Adaptive Boosting)</span>
+        </a><ul class="menu-list"><li>
+        <a class="is-flex" href="#Example">
+        <span class="has-mr-6">1.1.1</span>
+        <span>Example</span>
+        </a></li></ul></li></ul></li></ul>
         </div>
     </div>
 </div>
@@ -383,7 +1062,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.png" alt="(ENG) Boosting (AdbBoost)" height="28">
+                    <img src="/images/logo.png" alt="boosting" height="28">
                 
                 </a>
                 <p class="is-size-7">
