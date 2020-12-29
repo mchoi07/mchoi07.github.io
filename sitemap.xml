@@ -1,246 +1,26 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/12/07/encryption-decryption/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/07/18/random-number/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/07/19/random-variable/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/07/23/input-analysis/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/07/30/output-analysis/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/11/18/sftp/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/11/20/nifi-virus-scanning/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2020/01/23/feature-engineering-101/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/12/16/mlcrash02-keyterm/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2019/12/13/mlcrash01-overview/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2020/04/01/boosting/</loc>
-    
-    <lastmod>2020-12-29</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/2020/03/23/Naive%20Bayes%20from%20scratch/</loc>
-    
-    <lastmod>2020-03-24</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/about/index.html</loc>
-    
-    <lastmod>2019-11-07</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/404.html</loc>
-    
-    <lastmod>2019-07-18</lastmod>
-    
-  </url>
-  
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type="text/xsl" href="sitemap.xsl"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <url>
-    <loc>https://mchoi07.github.io/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-  </url>
 
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/simulation/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/linux/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/apache-nifi/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/%EC%95%94%ED%98%B8%ED%99%94%EB%B3%B5%ED%98%B8%ED%99%94/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/feature-engineering/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/naive-bayes-classifier/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/ensemble/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/boosting/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/tags/ababoost/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
+    <sitemap>
+        <loc>https://mchoi07.github.io/post-sitemap.xml</loc>
+        <lastmod>2020-12-29T18:05:01.508Z</lastmod>
+    </sitemap>
 
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/statistics/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/devsecops/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/data-engineering/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/devsecops/system/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/data-engineering/apache-nifi/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/devsecops/security/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/machine-learning/crash-course/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/machine-learning/classification/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://mchoi07.github.io/categories/machine-learning/ensemble/</loc>
-    <lastmod>2020-12-29</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-</urlset>
+    <sitemap>
+        <loc>https://mchoi07.github.io/page-sitemap.xml</loc>
+        <lastmod>2020-12-29T18:11:31.011Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://mchoi07.github.io/category-sitemap.xml</loc>
+        <lastmod>2020-12-29T18:05:01.508Z</lastmod>
+    </sitemap>
+
+    <sitemap>
+        <loc>https://mchoi07.github.io/tag-sitemap.xml</loc>
+        <lastmod>2020-12-29T18:05:01.508Z</lastmod>
+    </sitemap>
+
+</sitemapindex>
+<!-- XML Sitemap generated by Hexo SEO Friendly Sitemap Generator -->
