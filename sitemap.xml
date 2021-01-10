@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://mchoi07.github.io/2021/01/10/leetcode_partition_labels/</loc>
+    
+    <lastmod>2021-01-10</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://mchoi07.github.io/2019/12/07/encryption-decryption/</loc>
     
     <lastmod>2020-12-29</lastmod>
@@ -102,7 +109,7 @@
 
   <url>
     <loc>https://mchoi07.github.io/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -110,63 +117,84 @@
   
   <url>
     <loc>https://mchoi07.github.io/tags/simulation/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/linux/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/apache-nifi/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/system-security/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/feature-engineering/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/naive-bayes-classifier/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/ensemble/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/boosting/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/tags/ababoost/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mchoi07.github.io/tags/leetcode/</loc>
+    <lastmod>2021-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mchoi07.github.io/tags/coding/</loc>
+    <lastmod>2021-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mchoi07.github.io/tags/python/</loc>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -175,35 +203,42 @@
   
   <url>
     <loc>https://mchoi07.github.io/categories/statistics/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/categories/devsecops/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/categories/data-engineering/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/categories/ml-crash-course/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>https://mchoi07.github.io/categories/machine-learning/</loc>
-    <lastmod>2020-12-29</lastmod>
+    <lastmod>2021-01-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://mchoi07.github.io/categories/leetcode/</loc>
+    <lastmod>2021-01-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
